@@ -1,4 +1,4 @@
 - type: sinkPort
   id: SpaceArtilleryFire
-  name: "Вогонь з озброєння"
-  description: "Керує механізмом стрільби Космічної Артилерії."
+  name: "Fire Armament"
+  description: "Controls Space Artillery's firing mechanism."
