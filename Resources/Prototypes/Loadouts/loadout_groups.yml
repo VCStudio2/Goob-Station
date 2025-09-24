@@ -1439,6 +1439,8 @@
   - LoadoutSecurityEnergyGunMini
   - LoadoutSecurityEnergyGun
   - LoadoutSecurityDisablerSMG
+  - LoadoutSecurityEnergyGunPistol
+  - LoadoutSecurityGunLaserCarbineAutomatic
 # SECURITY - PIRATE END
 
 # Medical
