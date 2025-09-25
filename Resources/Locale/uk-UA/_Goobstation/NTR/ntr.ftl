@@ -1,151 +1,136 @@
 # base
-store-currency-nt-loyalty-point = NT loyalty point
-store-preset-name-ntr = Executive briefcase store
+store-currency-nt-loyalty-point = Бал лояльності NT
+store-preset-name-ntr = Магазин "Дипломат керівника
 
-ntr-scan-fail = ERROR: Item rejected by scanning protocol.
-ntr-scan-success = Successfully credited {$amount} loyalty points.
-# listing
-# station
+ntr-scan-fail = ПОМИЛКА: Предмет відхилено протоколом сканування.
+ntr-scan-success = Успішно зараховано {$amount} балів лояльності
 
-ntr-executive-spesos-small-name = Small spesos grant
-ntr-executive-spesos-small-desc = Receive a small monetary bonus from NanoTrasen for your hard work. As a good employee, you should give this to the quartermaster, right?
+ntr-executive-spesos-small-name = Малий грант спесо
+ntr-executive-spesos-small-desc = Отримайте невеликий грошовий бонус від NanoTrasen за вашу наполегливу працю. Як хороший співробітник, ви повинні віддати це квартирмейстеру, чи не так?
 
-ntr-executive-disk-small-name = Small research grant
-ntr-executive-disk-small-desc = Receive a small research grant from NanoTrasen's lead research team, containing 10 data disks with research points.
+ntr-executive-disk-small-name = Малий дослідницький грант
+ntr-executive-disk-small-desc = Отримайте невеликий дослідницький грант від провідної дослідницької групи NanoTrasen, що містить 10 дисків з даними з очками дослідження.
 
-ntr-executive-emergency-meds-name = Emergency medical supplies
-ntr-executive-emergency-meds-desc = A small crate containing trauma medkits. Be prepared to explain yourself after purchasing this.
+ntr-executive-emergency-meds-name = Екстрені медичні засоби
+ntr-executive-emergency-meds-desc = Невеликий ящик з аптечками для травм. Будьте готові пояснити свою покупку.
 
-ntr-executive-disablers-name = Disablers crate
-ntr-executive-disablers-desc = A crate containing 3 disablers and 1 disabler SMG. NanoTrasen is not liable for any damages caused by these weapons.
+ntr-executive-disablers-name = Ящик з дизейблерами
+ntr-executive-disablers-desc = Ящик з 3 дизейблерами та 1 пістолетом-кулеметом дизейблером. NanoTrasen не несе відповідальності за будь-які збитки, завдані цією зброєю.
 
-ntr-executive-mats-name = Order materials
-ntr-executive-mats-desc = Order construction materials from NanoTrasen's global cargo department.
+ntr-executive-mats-name = Замовити матеріали
+ntr-executive-mats-desc = Замовте будівельні матеріали у глобальному вантажному відділі NanoTrasen.
 
-ntr-executive-tools-small-name = Generic tools crate
-ntr-executive-tools-small-desc = A crate containing basic engineering tools.
+ntr-executive-tools-small-name = Ящик зі звичайними інструментами
+ntr-executive-tools-small-desc = Ящик з основними інженерними інструментами.
 
-ntr-executive-pizza-small-name = Order a small pizza party
-ntr-executive-pizza-small-desc = Order a small pizza party bundle from NanoTrasen. As a good employee, you should share this with your coworkers... or eat it all yourself.
+ntr-executive-pizza-small-name = Замовити невелику піца-вечірку
+ntr-executive-pizza-small-desc = Замовте невеликий набір для піца-вечірки від NanoTrasen. Як хороший співробітник, ви повинні поділитися цим зі своїми колегами... або з'їсти все самі
 
-# personal
+ntr-executive-bsd-name = Викликати заступника Синього Щита
+ntr-executive-bsd-desc = Запросіть заступника Синього Щита з Центрального Командування. Цей особистий охоронець для вас або командного складу вимагає вагомого обґрунтування. Можна викликати лише одного.
 
-ntr-executive-bsd-name = Call Blueshield Deputy
-ntr-executive-bsd-desc = Request a Blueshield deputy from Central Command. This personal guard for you or command staff requires valid justification. Only one may be called.
+ntr-executive-softsuit-name = Замовити м'який скафандр
+ntr-executive-softsuit-desc = Базовий м'який скафандр, призначений для короткочасного перебування в космосі. Надає мінімальний захист.
 
-ntr-executive-softsuit-name = Order a softsuit
-ntr-executive-softsuit-desc = A basic softsuit designed for short-term space exposure. Offers minimal protection.
+ntr-executive-hardsuit-name = Замовити важкий скафандр
+ntr-executive-hardsuit-desc = Міцний важкий скафандр для екстремальних умов. Ви впевнені, що ця покупка виправдана?
 
-ntr-executive-hardsuit-name = Order a hardsuit
-ntr-executive-hardsuit-desc = A durable hardsuit for extreme environments. Are you sure this purchase is justified?
+ntr-executive-cigar-name = Портсигар преміум-класу
+ntr-executive-cigar-desc = Стандартний портсигар преміум-класу. Тільки керівникам дозволено курити їх у громадських місцях.
 
-ntr-executive-cigar-name = Premium cigar case
-ntr-executive-cigar-desc = A standard premium cigar case. Only executives are permitted to smoke these in public areas.
+ntr-executive-whiskey-name = Преміум віскі
+ntr-executive-whiskey-desc = Повна пляшка преміум віскі, дистильованого у 2879 році в Космічній Іспанії з останнього несинтетичного винограду, що існує.
 
-ntr-executive-whiskey-name = Premium whiskey
-ntr-executive-whiskey-desc = A full bottle of premium whiskey, distilled in 2879 in Space Spain from the last non-synthetic grapes in existence.
+ntr-executive-glasses-name = Окуляри ЦентКому
+ntr-executive-glasses-desc = Для тих випадків, коли вам потрібно виглядати важливішим, ніж ви є насправді.
 
-ntr-executive-glasses-name = CentComm glasses
-ntr-executive-glasses-desc = For when you need to look more important than you actually are.
+ntr-executive-savaliniaharunianisimious-name = Лазерний пістолет Svalinn
+ntr-executive-savaliniaharunianisimious-desc = Стандартний лазерний пістолет Svalinn, що зазвичай використовується в програмах самооборони NanoTrasen.
 
-ntr-executive-savaliniaharunianisimious-name = Svalinn laser pistol
-ntr-executive-savaliniaharunianisimious-desc = A standard Svalinn laser pistol, commonly used in NanoTrasen self-defense training programs.
+ntr-executive-1984-name = Револьвер Deckard
+ntr-executive-1984-desc = Стандартний пістолет Deckard для особистого захисту.
 
-ntr-executive-1984-name = Deckard revolver
-ntr-executive-1984-desc = A standard Deckard sidearm for personal defense.
+ntr-executive-combatmed-name = Бойова аптечка
+ntr-executive-combatmed-desc = Для тих випадків, коли вам потрібно більше, ніж просто базові засоби першої допомоги
 
-ntr-executive-combatmed-name = Combat medkit
-ntr-executive-combatmed-desc = For when you need more than just basic first aid supplies.
+ntr-executive-ert-sec-name = Викликати ШБР Безпеки
+ntr-executive-ert-sec-desc = Запросіть загін швидкого реагування безпеки з Центрального Командування. Використовується для екстремальних загроз, таких як ядерні оперативники або революції. Неправильне використання призведе до серйозних наслідків.
 
-# response teams
+ntr-executive-ert-med-name = Викликати ШБР Медиків
+ntr-executive-ert-med-desc = Запросіть медичний загін швидкого реагування. Спеціалізується на масових жертвах та відновленні після кризи. Не призначений для бойових ситуацій.
 
-ntr-executive-ert-sec-name = Call ERT Security
-ntr-executive-ert-sec-desc = Request an Emergency Response Team security unit from Central Command. Deployed for extreme threats like nuclear operatives or revolutions. Misuse will result in severe consequences.
+ntr-executive-ert-engi-name = Викликати ШБР Інженерів
+ntr-executive-ert-engi-desc = Запросіть інженерний загін швидкого реагування. Спеціалізується на відновленні атмосферних та енергетичних систем. Не є бойовою силою.
 
-ntr-executive-ert-med-name = Call ERT Medical
-ntr-executive-ert-med-desc = Request an Emergency Response Team medical unit. Specializes in mass casualty events and post-crisis recovery. Not equipped for combat situations.
+ntr-executive-ert-jani-name = Викликати ШБР Прибиральників
+ntr-executive-ert-jani-desc = Запросіть прибиральний загін швидкого реагування. Спеціалізується на прибиранні та санітарії після кризи. Не вступатиме в бій із загрозами.
 
-ntr-executive-ert-engi-name = Call ERT Engineering
-ntr-executive-ert-engi-desc = Request an Emergency Response Team engineering unit. Specializes in atmospheric and power system restoration. Not a combat force.
+ntr-executive-cburn-name = Викликати CBURN
+ntr-executive-cburn-desc = Запросіть команду реагування на біологічні загрози та стримування. Спеціалізується на біологічних загрозах та спалахах вірусів. Не втручайтеся в їхні протоколи карантину
 
-ntr-executive-ert-jani-name = Call ERT Janitorial
-ntr-executive-ert-jani-desc = Request an Emergency Response Team janitorial unit. Specializes in post-crisis cleanup and sanitation. Will not engage threats.
+ntr-executive-telecom-name = Плати телеком-сервера
+ntr-executive-telecom-desc = Ящик з 2 платами телеком-сервера. Необхідні для систем зв'язку ШІ.
 
-ntr-executive-cburn-name = Call CBURN
-ntr-executive-cburn-desc = Request a Containment and Biohazard Urban Response Team. Specialized in biological threats and viral outbreaks. Do not interfere with their quarantine protocols.
+ntr-executive-silo-name = Плата силосу
+ntr-executive-silo-desc = Містить 1 плату силосу. Для випадків, коли хтось "втратив" ваш оригінальний силос.
 
-# machine boards
+ntr-executive-fat-name = Екстрактор жиру
+ntr-executive-fat-desc = Плата для пристрою для вилучення жиру. Корпоративні політики оздоровлення забороняють ожиріння серед співробітників.
 
-ntr-executive-telecom-name = Telecom server machine boards
-ntr-executive-telecom-desc = A crate containing 2 telecom server machine boards. Essential for AI communication systems.
+ntr-executive-grav-name = Міні-генератор гравітації
+ntr-executive-grav-desc = Плата для компактного генератора гравітації.
 
-ntr-executive-silo-name = Silo machine board
-ntr-executive-silo-desc = Contains 1 silo machine board. For when someone "misplaces" your original silo.
+ntr-executive-teleporter-name = Плата вантажного телепорту
+ntr-executive-teleporter-desc = Плата вантажного телепорту для полегшення транспортування припасів за допомогою телепортації. Несанкціоноване використання є крадіжкою згідно з політикою NanoTrasen.
 
-ntr-executive-fat-name = Fat extractor
-ntr-executive-fat-desc = Machine board for a fat extraction device. Corporate wellness policies prohibit employee obesity.
+ntr-executive-holopad-name = Плати голопаду
+ntr-executive-holopad-desc = Містить 2 плати голопаду. Дешевше, ніж встановлювати їх на початку зміни.
 
-ntr-executive-grav-name = Mini gravity generator
-ntr-executive-grav-desc = Machine board for a compact gravity generator.
+ntr-executive-monitoring-name = Плата сервера моніторингу екіпажу
+ntr-executive-monitoring-desc = Плата для систем моніторингу екіпажу. Поводьтеся обережно - вартість заміни значна.
 
-ntr-executive-teleporter-name = Cargo teleporter machine board
-ntr-executive-teleporter-desc = Cargo teleporter machine board, for easier transportation of supplies via teleportation. Unauthorized use constitutes theft under NanoTrasen policy.
+ntr-executive-rnd-name = Плата сервера R&D
+ntr-executive-rnd-desc = При встановленні створює сервер досліджень та розробок.
 
-ntr-executive-holopad-name = Holopad machine boards
-ntr-executive-holopad-desc = Contains 2 holopad machine boards. Cheaper than installing them at shift start.
+ntr-executive-comms-name = Плата консолі зв'язку
+ntr-executive-comms-desc = Високоцінна комп'ютерна плата для консолей екстреного зв'язку.
 
-ntr-executive-monitoring-name = Crew monitoring server board
-ntr-executive-monitoring-desc = Machine board for crew monitoring systems. Handle with care - replacement costs are substantial.
+ntr-executive-cargosell-name = Плата консолі продажу вантажу
+ntr-executive-cargosell-desc = Дозволяє продаж ресурсів. Фінансові операції не підлягають перевірці співробітниками.
 
-ntr-executive-rnd-name = R&D server machine board
-ntr-executive-rnd-desc = Constructs a research and development server when installed.
+ntr-executive-cargoshuttle-name = Плата консолі вантажного шатла
+ntr-executive-cargoshuttle-desc = Спеціалізована консоль управління для вантажних шатлів. Несанкціоноване використання порушує транспортні протоколи.
 
-ntr-executive-comms-name = Communications console board
-ntr-executive-comms-desc = High-value computer board for emergency communications consoles.
+ntr-executive-shuttle-name = Набір для будівництва шатла
+ntr-executive-shuttle-desc = Стандартний ящик, що містить 4 комплекти двигунів, 1 плату комп'ютера шатла та 1 комплект гіроскопа.
 
-ntr-executive-cargosell-name = Cargo sales console board
-ntr-executive-cargosell-desc = Enables resource sales. Financial transactions are not subject to employee review.
+ntr-executive-id-name = Плата комп'ютера ID-карт
+ntr-executive-id-desc = Високоцінна комп'ютерна плата для створення консолі ID-карт
 
-ntr-executive-cargoshuttle-name = Cargo shuttle console board
-ntr-executive-cargoshuttle-desc = Specialized control console for cargo shuttles. Unauthorized use violates transport protocols.
+ntr-executive-tier-1-name = Станція
+ntr-executive-tier-2-name = Команди реагування
+ntr-executive-tier-3-name = Особисте
+ntr-executive-tier-4-name = Зло
+ntr-executive-tier-5-name = Рідкісні плати машин
+ntr-console-insert-deny = Неправильно!
+ntr-console-insert-accept = Правильно!
 
-ntr-executive-shuttle-name = Shuttle construction bundle
-ntr-executive-shuttle-desc = Standard crate containing 4 thruster flatpacks, 1 shuttle computer board, and 1 gyroscope flatpack.
+ntr-console-insert-deny-stamps = Недійсні марки.
 
-ntr-executive-id-name = Id card computer board
-ntr-executive-id-desc = High-value computer board to make an ID card console.
-
-# tiers
-
-ntr-executive-tier-1-name = Station
-ntr-executive-tier-2-name = Response teams
-ntr-executive-tier-3-name = Personal
-ntr-executive-tier-4-name = Evil
-ntr-executive-tier-5-name = Rare machine boards
-
-# insert attempt in console
-ntr-console-insert-deny = Wrong!
-ntr-console-insert-accept = Correct!
-
-ntr-console-insert-deny-stamps = Invalid stamps.
-
-ntr-bounty-console-reward-label = Reward: [color=limegreen]{$reward} loyalty points[/color]
-ntr-bounty-console-manifest-entry =
-    { $amount ->
-        [1] {$item}
+ntr-bounty-console-reward-label = Нагорода: [color=limegreen]{$reward} балів лояльності[/color]
+ntr-bounty-console-manifest-entry = { $amount ->
+         [1] {$item}
         *[other] {$item} x{$amount}
     }
 
-ntr-bounty-console-flavor-left = Bounties approved by Central Command. Bribes not included. Probably.
+ntr-bounty-console-flavor-left = Завдання схвалені Центральним Командуванням. Хабарі не включені. Можливо.
 
-ntr-console-task-fail-insert = Task failed.
-ntr-console-reagent-fail = Not enough reagents to complete the task!
+ntr-console-task-fail-insert = Завдання провалено.
+ntr-console-reagent-fail = Недостатньо реагентів для виконання завдання!
+ntr-console-no-solution = Не вдалося знайти розчин {$solutionName} у пробірці.
+ntr-console-missing-reagent = У пробірці відсутній реагент {$reagent}.
+ntr-console-insufficient-reagent-debug = Недостатньо реагенту. Потрібно: {$requiredReagent}, Знайдено: {$actualReagent}. Необхідна кількість: {$required}, Фактична кількість: {$actual}.
+ntr-console-task-fail = Не вдалося завантажити завдання.
 
-# experimental
-ntr-console-no-solution = Could not find solution {$solutionName} on the vial.
-ntr-console-missing-reagent = Vial is missing reagent {$reagent}.
-ntr-console-insufficient-reagent-debug = Insufficient reagent. Required: {$requiredReagent}, Found: {$actualReagent}. Required amount: {$required}, Actual amount: {$actual}.
-ntr-console-task-fail = Task failed to load.
-
-ntr-bounty-console-menu-title = NTR task console
-ntr-bounty-console-print-button = Accept
+ntr-bounty-console-menu-title = Консоль завдань NTR
+ntr-bounty-console-print-button = Прийняти

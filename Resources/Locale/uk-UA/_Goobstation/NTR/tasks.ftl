@@ -1,75 +1,73 @@
-task-ntr-stamp-base-name = Get a document stamped
-task-ntr-chem-base-name = Send chemicals to CentComm
-task-ntr-drink-base-name = Sending a drink to CC
-task-ntr-special-drink-name = Sending a special drink to CC
+task-ntr-stamp-base-name = Отримати печатку на документі
+task-ntr-chem-base-name = Надіслати хімікати до ЦентКомму
+task-ntr-drink-base-name = Надіслати напій до ЦК
+task-ntr-special-drink-name = Надіслати особливий напій до ЦК
 
-task-ntr-stamp-hos = Get HOS & NanoRep stamp on this document to complete.
-task-ntr-stamp-hop = Get HOP & NanoRep stamp on this document to complete.
-task-ntr-stamp-ce = Get CE & NanoRep stamp on this document to complete.
-task-ntr-stamp-cmo = Get CMO & NanoRep stamp on this document to complete.
-task-ntr-stamp-rd = Get RD & NanoRep stamp on this document to complete.
-task-ntr-stamp-qm = Get QM & NanoRep stamp on this document to complete.
+task-ntr-stamp-hos = Отримайте печатки ГСБ та представника NanoTrasen на цьому документі для завершення.
+task-ntr-stamp-hop = Отримайте печатки ГП та представника NanoTrasen на цьому документі для завершення.
+task-ntr-stamp-ce = Отримайте печатки ГІ та представника NanoTrasen на цьому документі для завершення.
+task-ntr-stamp-cmo = Отримайте печатки ГЛ та представника NanoTrasen на цьому документі для завершення.
+task-ntr-stamp-rd = Отримайте печатки НК та представника NanoTrasen на цьому документі для завершення.
+task-ntr-stamp-qm = Отримайте печатки КМ та представника NanoTrasen на цьому документі для завершення.
 
-task-ntr-powergrid-desc = Enforce a powergrid check from Central Command.
-task-ntr-powergrid-name = Power grid check
+task-ntr-powergrid-desc = Забезпечити перевірку електромережі від Центрального Командування.
+task-ntr-powergrid-name = Перевірка електромережі
 
-task-ntr-ling-blood-name = Send changeling blood to CentComm
-task-ntr-ling-blood-desc = Send a vial with 30 changelings blood to CC for research.
+task-ntr-ling-blood-name = Надіслати кров перевертня до ЦентКомму
+task-ntr-ling-blood-desc = Надіслати пробірку з 30 одиницями крові перевертнів до ЦК для дослідження.
 
-task-ntr-artifexium-name = Send artifexium to CentComm
-task-ntr-artifexium-desc = Send a vial with 30 artifexium to CC for research.
+task-ntr-artifexium-name = Надіслати артефаксіум до ЦентКомму
+task-ntr-artifexium-desc = Надіслати пробірку з 30 одиницями артефаксіуму до ЦК для дослідження.
 
-task-ntr-weh-name = Send weh juice to CentComm
-task-ntr-weh-desc = Send a vial with 30u of Weh juice to CC for wehwehwehweh
+task-ntr-weh-name = Надіслати сік "вех" до ЦентКомму
+task-ntr-weh-desc = Надіслати пробірку з 30 одиницями соку "Вех" до ЦК для вехвехвехвех
 
-task-ntr-hew-name = Send heW juice to CentComm
-task-ntr-hew-desc = Send a vial with 30u of heW juice to CC for wehwehwehweh
+task-ntr-hew-name = Надіслати сік "хеВ" до ЦентКомму
+task-ntr-hew-desc = Надіслати пробірку з 30 одиницями соку "хеВ" до ЦК для вехвехвехвех
 
-task-ntr-ethyl-desc = Send a vial with 30u of Ethylredoxrazine for something important.
+task-ntr-ethyl-desc = Надіслати пробірку з 30 одиницями етилредоксазину для чогось важливого.
 
-task-ntr-ipecac-desc = Send a vial with 30u of Ipecac for torturing.
+task-ntr-ipecac-desc = Надіслати пробірку з 30 одиницями іпекаку для тортур.
 
-task-ntr-tr-acid-desc = Send a vial with 30u of Tranexamic Acid for stocking security.
+task-ntr-tr-acid-desc = Надіслати пробірку з 30 одиницями транексамової кислоти для забезпечення безпеки.
 
-task-ntr-sigynate-desc = Send a vial with 30u of Sigynate for stocking security.
+task-ntr-sigynate-desc = Надіслати пробірку з 30 одиницями сигінату для забезпечення безпеки.
 
-task-ntr-dexalin-desc = Send a vial with 30u of dexalin plus to centcomm.
+task-ntr-dexalin-desc = Надіслати пробірку з 30 одиницями дексаліну плюс до центкому.
 
-task-ntr-cogni-name = Send Cognizine to CentComm
-task-ntr-cogni-desc = Send a vial with at least 10u of Cognizine for research.
+task-ntr-cogni-name = Надіслати когнізин до ЦентКомму
+task-ntr-cogni-desc = Надіслати пробірку з щонайменше 10 одиницями когнізину для дослідження.
 
-task-ntr-holy-name = Send Holy water to CentComm
-task-ntr-holy-desc = Send a vial with 30u Holy water for research.
+task-ntr-holy-name = Надіслати святу воду до ЦентКомму
+task-ntr-holy-desc = Надіслати пробірку з 30 одиницями святої води для дослідження.
 
-task-ntr-razorium-name = Send Razorium to CentComm
-task-ntr-razorium-desc = Send a jug with 100u of Razorium to CC for a clown execution.
+task-ntr-razorium-name = Надіслати разоріум до ЦентКомму
+task-ntr-razorium-desc = Надіслати глечик з 100 одиницями разоріуму до ЦК для страти клоуна.
 
-task-ntr-punct-name = Send Puncturase to CentComm
-task-ntr-punct-desc = Send a jug with 100u of Puncturase to CC for stocking ERT with chems.
+task-ntr-punct-name = Надіслати пунктуразу до ЦентКомму
+task-ntr-punct-desc = Надіслати глечик з 100 одиницями пунктурази до ЦК для поповнення запасів хімікатів для ОШР.
 
-task-ntr-trico-name = Send Tricordrazine to CentComm
-task-ntr-trico-desc = Send a jug with 100u of Tricordrazine to CC for training.
+task-ntr-trico-name = Надіслати трикордразин до ЦентКомму
+task-ntr-trico-desc = Надіслати глечик з 100 одиницями трикордразину до ЦК для тренувань.
 
-task-ntr-meth-name = Send Meth to CentComm
-task-ntr-meth-desc = Send a jug with 100u of Desoxyephedrine to CC for [REDACTED].
+task-ntr-meth-name = Надіслати мет до ЦентКомму
+task-ntr-meth-desc = Надіслати глечик з 100 одиницями дезоксіефедрину до ЦК для [ВИДАЛЕНО].
 
-task-ntr-thc-name = Send THC to CentComm
-task-ntr-thc-desc = Send a jug with 100u of THC to CC for a "special party".
-
-# Drink descriptions
-task-ntr-kira-special-desc = Send 30u of Kira Special cocktail to CC.
-task-ntr-nuclear-cola-desc = Send 30u of Nuclear Cola to CC. Highly classified!
-task-ntr-gildlager-desc = Deliver 30u of Gildlager beer for quality check.
-task-ntr-grog-desc = Provide 30u of authentic Space Grog.
-task-ntr-hippies-delight-desc = 30u of Hippie's Delight required for "analysis".
-task-ntr-irish-car-bomb-desc = Collect 30u of Irish Car Bomb cocktail.
-task-ntr-long-island-desc = Submit 30u of Long Island Iced Tea.
-task-ntr-manhattan-desc = 30u of Manhattan cocktail needed for VIP party.
-task-ntr-manly-dorf-desc = Obtain 30u of Manly Dorf brew.
-task-ntr-pina-colada-desc = 30u of Pina Colada for tropical research.
-task-ntr-cogchamp-desc = Collect 30u of CogChamp energy drink.
-task-ntr-singulo-desc = 30u of Singularity Bomb cocktail - handle with care!
-task-ntr-tequila-sunrise-desc = 30u of Tequila Sunrise for sunrise simulation.
-task-ntr-white-russian-desc = The Dude abides - 30u of White Russian required.
-task-ntr-budget-insuls-desc = 30u of Budget Insulation drink for tiders.
-task-ntr-zombie-cocktail-desc = EXTREME 30u of Zombie Cocktail!
+task-ntr-thc-name = Надіслати ТГК до ЦентКомму
+task-ntr-thc-desc = Надіслати глечик з 100 одиницями ТГК до ЦК для "особливої вечірки"
+task-ntr-kira-special-desc = Надіслати 30 одиниць коктейлю "Кіра Спешл" до ЦК.
+task-ntr-nuclear-cola-desc = Надіслати 30 одиниць "Ядерної коли" до ЦК. Цілком таємно!
+task-ntr-gildlager-desc = Доставити 30 одиниць пива "Гілдлагер" для перевірки якості.
+task-ntr-grog-desc = Надайте 30 одиниць автентичного космічного грогу.
+task-ntr-hippies-delight-desc = 30 одиниць "Насолоди хіпі" потрібно для "аналізу".
+task-ntr-irish-car-bomb-desc = Зберіть 30 одиниць коктейлю "Ірландська автомобільна бомба".
+task-ntr-long-island-desc = Надішліть 30 одиниць "Лонг-Айлендського холодного чаю".
+task-ntr-manhattan-desc = 30 одиниць коктейлю "Манхеттен" потрібно для VIP-вечірки.
+task-ntr-manly-dorf-desc = Отримайте 30 одиниць напою "Мужній Дорф".
+task-ntr-pina-colada-desc = 30 одиниць "Піна Колади" для тропічних досліджень.
+task-ntr-cogchamp-desc = Зберіть 30 одиниць енергетичного напою "КогЧемп".
+task-ntr-singulo-desc = 30 одиниць коктейлю "Сингулярна бомба" - поводьтеся обережно!
+task-ntr-tequila-sunrise-desc = 30 одиниць "Текіли Санрайз" для симуляції сходу сонця.
+task-ntr-white-russian-desc = Чувак терпить - потрібно 30 одиниць "Білого росіянина".
+task-ntr-budget-insuls-desc = 30 одиниць напою "Бюджетна ізоляція" для тайдерів.
+task-ntr-zombie-cocktail-desc = ЕКСТРЕМАЛЬНІ 30 одиниць коктейлю "Зомбі"!

@@ -1,4 +1,4 @@
-﻿cmd-unlocknode-desc = Unlocks a node on a given artifact
-cmd-unlocknode-help = unlocknode <artifact uid> <node uid>
-cmd-unlocknode-artifact-hint = <artifact uid>
-cmd-unlocknode-node-hint = <node uid>
+cmd-unlocknode-desc = Розблоковує вузол на даному артефакті
+cmd-unlocknode-help = unlocknode <uid артефакту> <uid вузла>
+cmd-unlocknode-artifact-hint = <uid артефакту>
+cmd-unlocknode-node-hint = <uid вузла>

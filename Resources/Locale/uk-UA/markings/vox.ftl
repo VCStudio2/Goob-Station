@@ -1,56 +1,56 @@
-marking-TattooVoxHeartLeftArm-heart_l_arm = Vox Left Arm Tattoo (Heart)
-marking-TattooVoxHeartLeftArm = Vox Left Arm Tattoo (Heart)
+marking-TattooVoxHeartLeftArm-heart_l_arm = Тату Вокса на лівій руці (Серце)
+marking-TattooVoxHeartLeftArm = Тату Вокса на лівій руці (Серце)
 
-marking-TattooVoxHeartRightArm-heart_r_arm = Vox Right Arm Tattoo (Heart)
-marking-TattooVoxHeartRightArm = Vox Right Arm Tattoo (Heart)
+marking-TattooVoxHeartRightArm-heart_r_arm = Тату Вокса на правій руці (Серце)
+marking-TattooVoxHeartRightArm = Тату Вокса на правій руці (Серце)
 
-marking-TattooVoxHiveChest-hive_s = Vox Chest Tattoo (hive)
-marking-TattooVoxHiveChest = Vox Chest Tattoo (hive)
+marking-TattooVoxHiveChest-hive_s = Тату Вокса на грудях (Вулик)
+marking-TattooVoxHiveChest = Тату Вокса на грудях (Вулик)
 
-marking-TattooVoxNightlingChest-nightling_s = Vox Chest Tattoo (nightling)
-marking-TattooVoxNightlingChest = Vox Chest Tattoo (nightling)
+marking-TattooVoxNightlingChest-nightling_s = Тату Вокса на грудях (Найтлінг)
+marking-TattooVoxNightlingChest = Тату Вокса на грудях (Найтлінг)
 
-marking-VoxScarEyeRight-vox_scar_eye_right = Right Eye Scar
-marking-VoxScarEyeRight = Eye Scar (Right)
+marking-VoxScarEyeRight-vox_scar_eye_right = Шрам на правому оці
+marking-VoxScarEyeRight = Шрам на оці (правий)
 
-marking-VoxScarEyeLeft-vox_scar_eye_left = Left Eye Scar
-marking-VoxScarEyeLeft = Eye Scar (Left)
+marking-VoxScarEyeLeft-vox_scar_eye_left = Шрам на лівому оці
+marking-VoxScarEyeLeft = Шрам на оці (лівий)
 
-marking-VoxScarTopSurgeryShort-vox_scar_top_surgery_short = Thoracotomy Scar
-marking-VoxScarTopSurgeryShort = Thoracotomy Scar
+marking-VoxScarTopSurgeryShort-vox_scar_top_surgery_short = Торакотомічний шрам
+marking-VoxScarTopSurgeryShort = Торакотомічний шрам
 
-marking-VoxScarTopSurgeryLong-vox_scar_top_surgery_long = Clamshell Scar
-marking-VoxScarTopSurgeryLong = Clamshell Scar
+marking-VoxScarTopSurgeryLong-vox_scar_top_surgery_long = Шрам "розкладачка
+marking-VoxScarTopSurgeryLong = Шрам "розкладачка
 
-marking-VoxScarChest-vox_scar_chest = Chest Scar
-marking-VoxScarChest = Chest Scar
+marking-VoxScarChest-vox_scar_chest = Шрам на грудях
+marking-VoxScarChest = Шрам на грудях
 
-marking-VoxScarNeck-vox_scar_neck = Neck Scar
-marking-VoxScarNeck = Neck Scar
+marking-VoxScarNeck-vox_scar_neck = Шрам на шиї
+marking-VoxScarNeck = Шрам на шиї
 
-marking-VoxScarChestBullets-vox_scar_chest_bullets = Bullet Holes Scar
-marking-VoxScarChestBullets = Chest Scar (Bullets)
+marking-VoxScarChestBullets-vox_scar_chest_bullets = Шрам від кульових отворів
+marking-VoxScarChestBullets = Шрам на грудях (кулі)
 
-marking-VoxScarStomachBullets-vox_scar_stomach_bullets = Bullet Holes Scar
-marking-VoxScarStomachBullets = Stomach Scar (Bullets)
+marking-VoxScarStomachBullets-vox_scar_stomach_bullets = Шрам від кульових отворів
+marking-VoxScarStomachBullets = Шрам на животі (кулі)
 
-marking-VoxScarFace1-vox_scar_face_1 = Face Scar
-marking-VoxScarFace1 = Face Scar (Large)
+marking-VoxScarFace1-vox_scar_face_1 = Шрам на обличчі
+marking-VoxScarFace1 = Шрам на обличчі (великий)
 
-marking-VoxScarFace2-vox_scar_face_2 = Face Scar
-marking-VoxScarFace2 = Face Scar (Small)
+marking-VoxScarFace2-vox_scar_face_2 = Шрам на обличчі
+marking-VoxScarFace2 = Шрам на обличчі (маленький)
 
-marking-VoxScarEyeRightSmall-vox_scar_eye_right_small = Right Eye Scar (Small)
-marking-VoxScarEyeRightSmall = Small Eye Scar (Right)
+marking-VoxScarEyeRightSmall-vox_scar_eye_right_small = Шрам на правому оці (маленький)
+marking-VoxScarEyeRightSmall = Маленький шрам на оці (правий)
 
-marking-VoxScarEyeLeftSmall-vox_scar_eye_left_small = Left Eye Scar (Small)
-marking-VoxScarEyeLeftSmall = Small Eye Scar (Left)
+marking-VoxScarEyeLeftSmall-vox_scar_eye_left_small = Шрам на лівому оці (маленький)
+marking-VoxScarEyeLeftSmall = Маленький шрам на оці (лівий)
 
-marking-VoxTailShort-vox_tail_small = Vox Tail (Short)
-marking-VoxTailShort = Vox Tail (Short)
+marking-VoxTailShort-vox_tail_small = Хвіст Вокса (Короткий)
+marking-VoxTailShort = Хвіст Вокса (Короткий)
 
-marking-VoxTail-vox_tail = Vox Tail (Medium)
-marking-VoxTail = Vox Tail (Medium)
+marking-VoxTail-vox_tail = Хвіст Вокса (Середній)
+marking-VoxTail = Хвіст Вокса (Середній)
 
-marking-VoxTailBig-vox_tail_big = Vox Tail (Big)
-marking-VoxTailBig = Vox Tail (Big)
+marking-VoxTailBig-vox_tail_big = Хвіст Вокса (Великий)
+marking-VoxTailBig = Хвіст Вокса (Великий)

@@ -1,40 +1,40 @@
-shadowling-enthrall-non-humanoid = It is not what you're looking for...
-shadowling-enthrall-mindshield = They can defy your powers!
-shadowling-enthrall-already-thrall = They are already your thrall!
-shadowling-enthrall-shadowling = You can not enthrall your own kind!
-shadowling-enthrall-psionic-insulated = Their essence burns with power beyond your control!
-shadowling-enthrall-dead = You need them alive!
+shadowling-enthrall-non-humanoid = Це не те, що ви шукаєте...
+shadowling-enthrall-mindshield = Вони можуть кинути виклик вашим силам!
+shadowling-enthrall-already-thrall = Вони вже ваші тралли!
+shadowling-enthrall-shadowling = Ви не можете поневолити свій власний рід!
+shadowling-enthrall-psionic-insulated = Їхня сутність палає силою, що перевищує ваш контроль!
+shadowling-enthrall-dead = Вони потрібні вам живими!
 
-shadowling-target-being-thralled = A dark presence grips your mind...!
+shadowling-target-being-thralled = Темна присутність охоплює ваш розум...!
 
-shadowling-glare-target = Your body seizes as an otherworldly glare bears down on you.
+shadowling-glare-target = Ваше тіло завмирає, коли на вас спрямовується потойбічний погляд.
 
-shadowling-shadow-walk-activate = I vanish between the breaths of light.
+shadowling-shadow-walk-activate = Я зникаю між подихами світла.
 
-shadowling-icy-veins-activated = An unnatural chill grips your limbs...
+shadowling-icy-veins-activated = Незвичайний холод охоплює ваші кінцівки...
 
-shadowling-rapid-rehatch-complete = The husk shudders, and from it, you are reborn unscathed.
+shadowling-rapid-rehatch-complete = Оболонка здригається, і з неї ви відроджуєтеся неушкодженими.
 
-shadowling-destroy-engines-used = The shuttle has already been delayed by someone else.
-shadowling-destroy-engines-arrived = Your powers make you unable to destroy the engines!
-shadowling-destroy-engines-not-called = The shuttle has not been called yet.
+shadowling-destroy-engines-used = Шаттл вже був затриманий кимось іншим.
+shadowling-destroy-engines-arrived = Ваші сили не дозволяють вам знищити двигуни!
+shadowling-destroy-engines-not-called = Шаттл ще не викликали.
 
-shadowling-collective-mind-success = You feel stronger than before! You need {$thralls} Thralls to achieve your true form!
-shadowling-collective-mind-failure = You don't feel anything. You need {$thralls} Thralls to achieve your true form.
-shadowling-collective-mind-ascend = You have gained all the powers... Now, to ascend!
+shadowling-collective-mind-success = Ви відчуваєте себе сильнішими, ніж раніше! Вам потрібно {$thralls} траллів, щоб досягти своєї справжньої форми!
+shadowling-collective-mind-failure = Ви нічого не відчуваєте. Вам потрібно {$thralls} траллів, щоб досягти своєї справжньої форми.
+shadowling-collective-mind-ascend = Ви здобули всі сили... Тепер, до вознесіння!
 
-shadowling-sonic-screech-complete = The air splits with your cry.
+shadowling-sonic-screech-complete = Повітря розривається від вашого крику.
 
-shadowling-null-charge-success = Your impact echoes through the wires as power yields to void.
-shadowling-null-charge-start = You begin to charge your fist with a nullifying force.
+shadowling-null-charge-success = Ваш удар відлунює в проводах, коли сила поступається порожнечі.
+shadowling-null-charge-start = Ви починаєте заряджати свій кулак нуліфікуючою силою.
 
-shadowling-black-rec-lesser-already = The target is already a Lesser Shadowling.
-shadowling-black-rec-revive-done = Darkness pulls you back from the brink.
-shadowling-black-rec-lesser-done = You feel like even stronger than before.
-shadowling-black-rec-limit = You have reached your limit. You can not empower any more Thralls!
+shadowling-black-rec-lesser-already = Ціль вже є меншим тіньовиком.
+shadowling-black-rec-revive-done = Темрява витягує вас з краю безодні.
+shadowling-black-rec-lesser-done = Ви відчуваєте себе ще сильнішими, ніж раніше.
+shadowling-black-rec-limit = Ви досягли своєї межі. Ви не можете посилити більше тралів!
 
-shadowling-ascendant-broadcast-dialog = Your message has been sent to everyone.
+shadowling-ascendant-broadcast-dialog = Ваше повідомлення було надіслано всім.
 
-shadowling-nox-imperii-done = No longer prey to the light, you stride where your ancestors withered.
+shadowling-nox-imperii-done = Більше не здобич світла, ви крокуєте там, де ваші предки зів'яли.
 
-shadowling-ascendance-fail = You cannot build your cocoon in this tile.
+shadowling-ascendance-fail = Ви не можете побудувати свій кокон на цій плитці.

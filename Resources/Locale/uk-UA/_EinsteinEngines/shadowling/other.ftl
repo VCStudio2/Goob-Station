@@ -1,44 +1,38 @@
-shadowling-on-try-equip-clothes = This is fruitless to you...
+shadowling-on-try-equip-clothes = Це для вас марно...
 
-reagent-name-shadowling-toxin = shadowling toxin
-reagent-desc-shadowling-toxin = A mysterious chemical that makes heals any shadowling and their thralls, but blinds anyone else
+reagent-name-shadowling-toxin = токсин тіньовика
+reagent-desc-shadowling-toxin = Таємнича хімічна речовина, яка лікує будь-якого тіньовика та його тралів, але осліплює всіх інших
 
-alerts-shadowling-light-name = Light Identifier
-alerts-shadowling-light-desc = This is your light identifier. If it reaches 0, you start taking damage. Prioritize standing in the shadows.
+alerts-shadowling-light-name = Ідентифікатор світла
+alerts-shadowling-light-desc = Це ваш ідентифікатор світла. Якщо він досягне 0, ви почнете отримувати шкоду. Надавайте перевагу перебуванню в тіні.
 
-chat-manager-shadowling-channel-name = Shadowmind
+chat-manager-shadowling-channel-name = Тіньовий розум
 
-shadowling-dead = You strangely regain your mind.
+shadowling-dead = Ви дивним чином повертаєте свій розум.
 
-shadowling-thrall-examined = This is your Thrall.
+shadowling-thrall-examined = Це ваш трал.
 
-guide-entry-shadowlings = Shadowlings
+guide-entry-shadowlings = Тіньовики
 
-reagent-effect-guidebook-blind-non-sling =
-    { $chance ->
-        [1] Blinds any
-        *[other] blind any
-    } non-shadowling
+reagent-effect-guidebook-blind-non-sling = { $chance ->
+        [1] Осліплює будь-якого
+        *[other] осліпити будь-якого
+    } не-тіньовика
 
-reagent-effect-guidebook-heal-sling =
-    { $chance ->
-        [1] Heals any
-        *[other] heal any
-    } shadowling and thrall
+reagent-effect-guidebook-heal-sling = { $chance ->
+        [1] Лікує будь-якого
+        *[other] лікувати будь-якого
+    } тіньовика та трала
 
-marking-LesserShadowlingEyes = Lesser Shadowling Eyes
-marking-AbominationHorns = Abomination Horns
-marking-AbominationTorso = Abomination Torso
+marking-LesserShadowlingEyes = Очі меншого тіньовика
+marking-AbominationHorns = Роги гидоти
+marking-AbominationTorso = Торс гидоти
 
-admin-verb-make-shadowling = Make the target into a shadowling.
-admin-verb-text-make-shadowling = Make Shadowling
+admin-verb-make-shadowling = Зробити ціль тіньовиком.
+admin-verb-text-make-shadowling = Зробити тіньовиком
 
-species-name-shadowling = Shadowling
-species-name-shadow = Shadow
-
-# Examine Texts
-shadowling-examine-self = [color=#D22B2B]You take {$damage} burn damage from light[/color]
-
-# UI
-asc-broadcast-title = Ascendant Broadcast
-asc-broadcast-prompt = Message
+species-name-shadowling = Тіньовик
+species-name-shadow = Тінь
+shadowling-examine-self = [color=#D22B2B]Ви отримуєте {$damage} опіків від світла[/color]
+asc-broadcast-title = Трансляція Вознесеного
+asc-broadcast-prompt = Повідомлення

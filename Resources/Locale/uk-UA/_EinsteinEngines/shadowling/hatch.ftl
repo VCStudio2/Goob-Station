@@ -1,21 +1,19 @@
-sling-hatch-engage-popup = THIS ACTION WILL START THE HATCHING PROGRESS! Use it again to confirm.
+sling-hatch-engage-popup = ЦЯ ДІЯ ПОЧНЕ ПРОЦЕС ВИЛУПЛЕННЯ! Використайте її ще раз для підтвердження.
 
-sling-hatch-first = You can barely hold yourself in this lesser form!
-sling-hatch-second = The urge to become something greater is overwhelming!
-sling-hatch-third = You feel a burning passion to hatch free of this shell and assume godhood!
+sling-hatch-first = Ви ледве тримаєтеся в цій меншій формі!
+sling-hatch-second = Бажання стати чимось більшим непереборне!
+sling-hatch-third = Ви відчуваєте палаючу пристрасть вилупитися з цієї оболонки і прийняти божественність!
 
-shadowling-ascension-not-empty = You feel a tremendous force inside this cocoon.
-shadowling-ascension-not-shadowling = You are not what it seeks for. Destroy it before it's too late!
-shadowling-ascension-not-creator = Only the creator of this cocoon can ascend in it.
-shadowling-ascension-ascending = Another shadowling is in the process of hatching. Help them out!
-shadowling-ascension-already-ascended = The ascension has already been completed.
-shadowling-ascension-start-warning = This is your cocoon. You should start the ascension as soon as possible.
+shadowling-ascension-not-empty = Ви відчуваєте величезну силу всередині цього кокона.
+shadowling-ascension-not-shadowling = Це не те, що воно шукає. Знищте його, поки не пізно!
+shadowling-ascension-not-creator = Тільки творець цього кокона може вознестися в ньому.
+shadowling-ascension-ascending = Інший тіньовик у процесі вилуплення. Допоможіть йому!
+shadowling-ascension-already-ascended = Вознесіння вже завершено.
+shadowling-ascension-start-warning = Це ваш кокон. Ви повинні почати вознесіння якомога швидше.
 
-shadowling-ascension-message =
-    An unidentified life-form is completing its evolution {$location}.
-    All remaining personnel are ordered to eliminate the source at any cost.
-    Failure to do so will result in total station collapse and absolute loss of all crew.
+shadowling-ascension-message = Неопізнана форма життя завершує свою еволюцію {$location}.
+    Усьому персоналу, що залишився, наказано знищити джерело за будь-яку ціну.
+    Невиконання цього призведе до повного колапсу станції та абсолютної втрати всього екіпажу.
 
-shadowling-ascended-message =
-    The air turns to ash. The stars blink in fear. Something ancient has awakened beneath your feet — a will not born of man, but of shadow and hunger.
-    It has remembered its name. It has remembered you. There will be no dawn.
+shadowling-ascended-message = Повітря перетворюється на попіл. Зірки злякано мерехтять. Щось древнє прокинулося під вашими ногами — воля, народжена не людиною, а тінню та голодом.
+    Воно згадало своє ім'я. Воно згадало вас. Світанку не буде.

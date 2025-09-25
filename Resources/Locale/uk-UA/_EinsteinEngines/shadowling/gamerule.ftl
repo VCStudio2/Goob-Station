@@ -1,35 +1,30 @@
-shadowling-condition-win = The shadowlings have successfully ascended into their final form!
-shadowling-condition-draw = Both parties took major losses, but crew managed to survive.
-shadowling-condition-failure = The crew have managed to stop the shadowlings from ascending!
+shadowling-condition-win = Тіньовики успішно перейшли у свою остаточну форму!
+shadowling-condition-draw = Обидві сторони зазнали великих втрат, але екіпаж зумів вижити.
+shadowling-condition-failure = Екіпажу вдалося зупинити тіньовиків від переходу!
 
-shadowling-list-start = The Shadowlings were:
-thrall-list-start = The Thralls were:
+shadowling-list-start = Тіньовиками були:
+thrall-list-start = Траллами були:
 
 shadowling-list-name = [color=#880808]{ $name }[/color] ([color=gray]{ $user }[/color])
 
-shadowling-title = Shadowlings
-shadowling-description = The shadow is the greatest teacher for how to come to the light.
+shadowling-title = Тіньовики
+shadowling-description = Тінь - найкращий вчитель того, як вийти на світло.
 
-shadowling-round-end-name = shadowling
+shadowling-round-end-name = тіньовик
 
-shadowling-role-greeting =
-    Something stirs deep in your mind. A red light floods your vision, and slowly you remember. Though your human disguise has served you
-    well, the time is nigh to cast it off and enter your true form. You have disguised yourself amongst the humans, but you are not one of them.
-    You are a shadowling, and you are to ascend at all costs.
-    Check the guidebook for more information.
+shadowling-role-greeting = Щось ворушиться глибоко у вашому розумі. Червоне світло заливає ваш зір, і повільно ви згадуєте. Хоча ваша людська личина добре вам служила,
+    настав час скинути її і прийняти свою справжню форму. Ви маскувалися серед людей, але ви не один з них.
+    Ви - тіньовик, і ви повинні вознестися за будь-яку ціну.
+    Перевірте довідник для отримання додаткової інформації.
 
-shadowling-role-greeting-short =
-    You are a shadowling who has awakened in the body of {$name}.
+shadowling-role-greeting-short = Ви - тіньовик, що прокинувся в тілі {$name}.
 
-thrall-role-greeting =
-    You are a thrall.
-    Help your Shadowling ascend by any means necessary.
+thrall-role-greeting = Ви - трал.
+    Допоможіть вашому тіньовику вознестися будь-якими необхідними засобами.
 
-shadowling-briefing =
-    Shed from this lesser form and start your path to ascension.
+shadowling-briefing = Скиньте цю меншу форму і почніть свій шлях до вознесіння.
 
-thrall-briefing =
-    You are no longer bound to your old beliefs.
-    Help your shadowling ascend at all costs.
+thrall-briefing = Ви більше не пов'язані своїми старими переконаннями.
+    Допоможіть вашому тіньовику вознестися за будь-яку ціну.
 
-objective-issuer-shadowling = Shadowling
+objective-issuer-shadowling = Тіньовик
