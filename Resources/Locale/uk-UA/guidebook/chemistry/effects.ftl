@@ -373,13 +373,13 @@ reagent-effect-guidebook-add-to-chemicals = { $chance ->
 reagent-effect-guidebook-remove-moodlet = Видаляє мудлет {$name}.
 reagent-effect-guidebook-purge-moodlets = Видаляє всі активні непостійні мудлети.
 reagent-effect-guidebook-blind-non-sling = { $chance ->
-        [1] Засліплює будь-якого
-        *[other] засліпити будь-якого
-    } не-тіневика
+        [1] Осліплює будь-якого
+        *[other] осліпити будь-якого
+    } не-тіньовика
 reagent-effect-guidebook-heal-sling = { $chance ->
         [1] Лікує будь-якого
         *[other] лікувати будь-якого
-    } тіневика та раба
+    } тіньовика та трала
 reagent-effect-guidebook-flash-reaction-effect = { $chance ->
         [1] Спричиняє
         *[other] спричинити
@@ -424,3 +424,4 @@ reagent-effect-guidebook-emote = { $chance ->
         [1] Змусить
         *[other] змусить
     } метаболізатор до [bold][color=white]{$emote}[/color][/bold]
+reagent-effect-guidebook-artifact-durability-restore = Відновлює {$restored} міцності в активних вузлах інопланетних артефактів.

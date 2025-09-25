@@ -1,1 +1,1 @@
-research-technology-kinetic-modifications = Кінетичні Модифікації
+research-technology-kinetic-modifications = Кінетичні модифікації

@@ -1,9 +1,9 @@
-spray-painter-window-title = Фарборозпилювач
+spray-painter-window-title = Розпилювач фарби
 
-spray-painter-style-not-available = Неможливо застосувати вибраний стиль до цього типу шлюзу
+spray-painter-style-not-available = Неможливо застосувати вибраний стиль до цього об'єкта
 spray-painter-selected-style = Вибраний стиль:
 
-spray-painter-selected-color = Вибраний колір:
+spray-painter-selected-color = Обраний колір:
 spray-painter-color-red = червоний
 spray-painter-color-yellow = жовтий
 spray-painter-color-brown = коричневий
