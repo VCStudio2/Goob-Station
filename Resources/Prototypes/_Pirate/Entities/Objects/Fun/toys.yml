@@ -183,7 +183,7 @@
   parent: BasePlushie
   id: PlushieVulpSusie # :3
   name: "Смішна плюшева антропоморфна лисичка"
-  description: "Та сама пульпа яка мала 4 подкаблучника... а може й більше..."
+  description: "Та сама пульпа, яка мала 4 підкаблучника... а може й більше..."
   components:
   - type: Sprite
     sprite: /Textures/_Pirate/Objects/Fun/toys.rsi
