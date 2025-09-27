@@ -1,11 +1,11 @@
-marking-TattooVoxHeartLeftArm-heart_l_arm = Татуювання Vox на лівій руці (серце)
-marking-TattooVoxHeartLeftArm = Татуювання Vox на лівій руці (серце)
+marking-TattooVoxHeartLeftArm-heart_l_arm = Тату Вокса на лівій руці (Серце)
+marking-TattooVoxHeartLeftArm = Тату Вокса на лівій руці (Серце)
 
-marking-TattooVoxHeartRightArm-heart_r_arm = Татуювання Vox на правій руці (серце)
-marking-TattooVoxHeartRightArm = Татуювання Vox на правій руці (серце)
+marking-TattooVoxHeartRightArm-heart_r_arm = Тату Вокса на правій руці (Серце)
+marking-TattooVoxHeartRightArm = Тату Вокса на правій руці (Серце)
 
-marking-TattooVoxHiveChest-hive_s = Татуювання Vox на грудях (вулик)
-marking-TattooVoxHiveChest = Татуювання Vox на грудях (вулик)
+marking-TattooVoxHiveChest-hive_s = Тату Вокса на грудях (Вулик)
+marking-TattooVoxHiveChest = Тату Вокса на грудях (Вулик)
 
-marking-TattooVoxNightlingChest-nightling_s = Татуювання Vox на грудях (нічна істота)
-marking-TattooVoxNightlingChest = Татуювання Vox на грудях (нічна істота)
+marking-TattooVoxNightlingChest-nightling_s = Тату Вокса на грудях (Найтлінг)
+marking-TattooVoxNightlingChest = Тату Вокса на грудях (Найтлінг)
