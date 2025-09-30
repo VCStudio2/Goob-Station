@@ -1,6 +1,6 @@
 - type: entity
   parent: MobStatusEffectBase
   id: StatusEffectFireBlasted
-  name: fire blasted
+  name: "обпалений вогнем"
   components:
   - type: FireBlastedStatusEffect

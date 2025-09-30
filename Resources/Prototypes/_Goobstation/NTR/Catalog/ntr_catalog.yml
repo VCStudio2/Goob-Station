@@ -1,8 +1,8 @@
 # station
 - type: listing
   id: NTRExecutiveCrateEVA
-  name: EVA crate
-  description: A crate containing 3 pairs of EVA hardsuits, to keep you and your people alive in a catastrophic situation.
+  name: "Ящик ЄВА"
+  description: "Ящик, що містить 3 пари скафандрів ЄВА, щоб зберегти вас і ваших людей живими в катастрофічній ситуації."
   productEntity: SpawnPodEvaKit
   icon:
     sprite: Structures/Storage/Crates/command.rsi
@@ -17,8 +17,8 @@
 
 - type: listing
   id: NTRExecutiveMindshield
-  name: Mindshield crate
-  description: A crate containing 3 mindshield implants. Corporate advises you to buy them in cargo anyway.
+  name: "Ящик з майндшилдами"
+  description: "Ящик, що містить 3 імпланти майндшилд. Корпорація радить вам все одно купувати їх у вантажному відділі."
   productEntity: SpawnPodMindshield
   icon:
     sprite: Structures/Storage/Crates/command.rsi
@@ -132,8 +132,8 @@
 # personal
 - type: listing
   id: NTRExecutiveInternCall
-  name: Call intern squad
-  description: Calls in a lead intern with special summoning coins, that are calling more interns.
+  name: "Викликати загін інтернів"
+  description: "Викликає головного інтерна зі спеціальними монетами виклику, які викликають більше інтернів."
   productEntity: SpawnPodInterns
   icon:
     sprite: _Goobstation/Objects/Tools/executive_briefcase.rsi
@@ -149,8 +149,8 @@
 
 - type: listing
   id: NTRExecutiveDagger
-  name: Phoron dagger
-  description: A fancy and expensive phoron dagger, used by elite CentComm fighters and important people.
+  name: "Фороновий кинджал"
+  description: "Вишуканий і дорогий фороновий кинджал, що використовується елітними бійцями ЦентКом та важливими особами."
   productEntity: SpawnPodDagger
   icon:
     sprite: _Goobstation/Objects/Weapons/Melee/e_daggerntr.rsi
@@ -165,8 +165,8 @@
 
 - type: listing
   id: NTRExecutiveSingleIntern
-  name: single Intern Coin
-  description: Summons one basic intern.
+  name: "одна монета інтерна"
+  description: "Викликає одного базового інтерна."
   productEntity: SpawnPodCoin
   icon:
     sprite: Objects/Misc/coins.rsi
@@ -312,8 +312,8 @@
 
 - type: listing
   id: NTRExecutiveFlatpack
-  name: task console flatpack # technically a flatpack but who cares lol
-  description: A normal flatpack containing a spare task console.
+  name: "плаский пакет з консоллю завдань" # technically a flatpack but who cares lol
+  description: "Звичайний плаский пакет, що містить запасну консоль завдань."
   productEntity: SpawnPodTaskFlatpack
   icon:
     sprite: Objects/Devices/flatpack.rsi
@@ -528,8 +528,8 @@
 # todo: add more debug stuff / and possibly make this open if emagged or something, but it was never intended for it tho.
 - type: listing
   id: NTRExecutiveDebugCodes
-  name: Nuclear codes
-  description: Stand ready for my arrival, worm.
+  name: "Ядерні коди"
+  description: "Готуйся до мого прибуття, черв'як."
   productEntity: BoxFolderNuclearCodes
   cost:
     NTLoyaltyPoint: 250

@@ -1,8 +1,8 @@
 - type: entity
   id: ActionSpawnResinDoor
   parent: BaseAction
-  name: Build a resin door (75)
-  description: Secrete tough malleable resin.
+  name: "Побудувати смоляні двері (75)"
+  description: "Виділити міцну пластичну смолу."
   components:
   - type: Action
     useDelay: 1
