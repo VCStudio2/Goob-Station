@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/24/2025 19:26:45
-  entityCount: 29098
+  time: 09/27/2025 16:07:48
+  entityCount: 29097
 maps:
 - 1
 grids:
@@ -616,7 +616,6 @@ entities:
             688: 61,-21
             689: 61,-23
             1006: 81,-6
-            1007: 81,-4
             1008: 81,-12
             1009: 81,-14
             1115: -23,-16
@@ -720,6 +719,7 @@ entities:
             4460: 79,-34
             4461: 79,-33
             4472: 79,-38
+            7880: 81,-4
         - node:
             color: '#FFFFFFFF'
             id: BotGreyscale
@@ -1333,6 +1333,7 @@ entities:
             7299: 17,-15
             7316: 14,-32
             7317: 15,-32
+            7879: 38,-15
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkLineS
@@ -3597,7 +3598,6 @@ entities:
             1002: 82,-14
             1003: 82,-12
             1004: 82,-6
-            1005: 82,-4
             1118: -26,-18
             1119: -26,-16
             2140: 15,-24
@@ -3752,6 +3752,7 @@ entities:
             7578: 7,19
             7579: 7,20
             7580: 7,21
+            7881: 82,-4
         - node:
             cleanable: True
             color: '#474F52FF'
@@ -4322,6 +4323,8 @@ entities:
             7735: -5,37
             7736: -7,37
             7737: -8,37
+            7863: 77,-5
+            7864: -61,2
         - node:
             color: '#52B4E931'
             id: FullTileOverlayGreyscale
@@ -4400,7 +4403,6 @@ entities:
             color: '#DE3A3A96'
             id: FullTileOverlayGreyscale
           decals:
-            1001: 77,-5
             1099: 58,-16
         - node:
             color: '#EFB34131'
@@ -4677,6 +4679,15 @@ entities:
             7796: 16,35
             7806: 10,33
             7808: 12,35
+            7851: 81,-2
+            7852: 80,-2
+            7853: 79,-2
+            7854: 78,-2
+            7855: 77,-2
+            7871: -61,5
+            7872: -60,5
+            7873: -59,5
+            7874: -58,5
         - node:
             color: '#52B4E996'
             id: HalfTileOverlayGreyscale
@@ -4759,15 +4770,6 @@ entities:
             color: '#DE3A3A96'
             id: HalfTileOverlayGreyscale
           decals:
-            397: -61,5
-            398: -60,5
-            399: -59,5
-            400: -58,5
-            989: 77,-2
-            990: 78,-2
-            991: 79,-2
-            992: 80,-2
-            993: 81,-2
             1098: 58,-17
             1102: 60,-18
             1103: 61,-18
@@ -4805,6 +4807,15 @@ entities:
             7803: 11,30
             7804: 10,30
             7805: 9,30
+            7858: 77,-4
+            7859: 78,-4
+            7860: 79,-4
+            7861: 80,-4
+            7862: 81,-4
+            7867: -58,3
+            7868: -59,3
+            7869: -60,3
+            7870: -61,3
         - node:
             color: '#52B4E996'
             id: HalfTileOverlayGreyscale180
@@ -4880,19 +4891,6 @@ entities:
             3149: 5,-37
             5258: 55,-15
         - node:
-            color: '#DE3A3A96'
-            id: HalfTileOverlayGreyscale180
-          decals:
-            403: -61,3
-            404: -60,3
-            405: -59,3
-            406: -58,3
-            996: 77,-4
-            997: 78,-4
-            998: 79,-4
-            999: 80,-4
-            1000: 81,-4
-        - node:
             color: '#EFB34196'
             id: HalfTileOverlayGreyscale180
           decals:
@@ -4922,6 +4920,8 @@ entities:
             7727: -12,40
             7728: -12,41
             7807: 11,34
+            7856: 76,-3
+            7865: -62,4
         - node:
             color: '#52B4E931'
             id: HalfTileOverlayGreyscale270
@@ -5006,8 +5006,6 @@ entities:
             color: '#DE3A3A96'
             id: HalfTileOverlayGreyscale270
           decals:
-            402: -62,4
-            995: 76,-3
             1091: 57,-20
             1092: 57,-19
             1093: 57,-18
@@ -5048,6 +5046,8 @@ entities:
             7734: -10,40
             7777: 13,33
             7797: 19,35
+            7857: 82,-3
+            7866: -57,4
         - node:
             color: '#52B4E931'
             id: HalfTileOverlayGreyscale90
@@ -5130,8 +5130,6 @@ entities:
             color: '#DE3A3A96'
             id: HalfTileOverlayGreyscale90
           decals:
-            401: -57,4
-            994: 82,-3
             1094: 63,-19
         - node:
             color: '#EFB34131'
@@ -6440,6 +6438,8 @@ entities:
             7813: 18,36
             7815: 11,35
             7820: 6,33
+            7847: 76,-2
+            7875: -62,5
         - node:
             color: '#37789B81'
             id: ThreeQuarterTileOverlayGreyscale
@@ -6488,8 +6488,6 @@ entities:
             color: '#DE3A3A96'
             id: ThreeQuarterTileOverlayGreyscale
           decals:
-            396: -62,5
-            985: 76,-2
             1096: 57,-17
         - node:
             color: '#EFB34131'
@@ -6510,6 +6508,8 @@ entities:
             7470: -7,-8
             7585: 10,23
             7705: -13,22
+            7848: 82,-4
+            7876: -57,3
         - node:
             color: '#37789B81'
             id: ThreeQuarterTileOverlayGreyscale180
@@ -6551,12 +6551,6 @@ entities:
             883: 71,-16
             3152: 7,-37
         - node:
-            color: '#DE3A3A96'
-            id: ThreeQuarterTileOverlayGreyscale180
-          decals:
-            394: -57,3
-            987: 82,-4
-        - node:
             color: '#EFB34196'
             id: ThreeQuarterTileOverlayGreyscale180
           decals:
@@ -6567,6 +6561,8 @@ entities:
           decals:
             7469: -9,-8
             7586: 8,23
+            7850: 76,-4
+            7878: -62,3
         - node:
             color: '#37789B81'
             id: ThreeQuarterTileOverlayGreyscale270
@@ -6607,12 +6603,6 @@ entities:
             882: 61,-16
             3151: 2,-37
         - node:
-            color: '#DE3A3A96'
-            id: ThreeQuarterTileOverlayGreyscale270
-          decals:
-            393: -62,3
-            988: 76,-4
-        - node:
             color: '#EFB34196'
             id: ThreeQuarterTileOverlayGreyscale270
           decals:
@@ -6631,6 +6621,8 @@ entities:
             7468: -7,-7
             7584: 10,24
             7814: 19,36
+            7849: 82,-2
+            7877: -57,5
         - node:
             color: '#37789B81'
             id: ThreeQuarterTileOverlayGreyscale90
@@ -6680,8 +6672,6 @@ entities:
             color: '#DE3A3A96'
             id: ThreeQuarterTileOverlayGreyscale90
           decals:
-            395: -57,5
-            986: 82,-2
             1095: 63,-18
             1097: 59,-17
         - node:
@@ -12780,7 +12770,7 @@ entities:
       pos: -13.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28831.738
+      secondsUntilStateChange: -29402.121
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14676,7 +14666,7 @@ entities:
       pos: 41.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -129439.96
+      secondsUntilStateChange: -130010.34
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18817,14 +18807,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 13.5,9.5
       parent: 2
-- proto: BenchRedComfy
-  entities:
-  - uid: 1119
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 34.5,5.5
-      parent: 2
   - uid: 1120
     components:
     - type: Transform
@@ -18833,17 +18815,25 @@ entities:
   - uid: 1121
     components:
     - type: Transform
-      pos: 80.5,-1.5
+      pos: 79.5,-1.5
       parent: 2
   - uid: 1122
     components:
     - type: Transform
-      pos: 79.5,-1.5
+      pos: 80.5,-1.5
       parent: 2
   - uid: 1123
     components:
     - type: Transform
       pos: 76.5,-1.5
+      parent: 2
+- proto: BenchRedComfy
+  entities:
+  - uid: 1119
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 34.5,5.5
       parent: 2
   - uid: 1124
     components:
@@ -76123,7 +76113,7 @@ entities:
       pos: 28.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -68003.91
+      secondsUntilStateChange: -68574.29
       state: Opening
   - uid: 11643
     components:
@@ -90123,7 +90113,7 @@ entities:
       pos: -34.5,-14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -203174.52
+      secondsUntilStateChange: -203744.9
       state: Closing
   - uid: 13875
     components:
@@ -90557,7 +90547,7 @@ entities:
       pos: -4.5,-71.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -194922.25
+      secondsUntilStateChange: -195492.64
       state: Closing
   - uid: 13961
     components:
@@ -153260,13 +153250,6 @@ entities:
     components:
     - type: Transform
       pos: 44.5,-18.5
-      parent: 2
-- proto: SpawnMobPotyzhnobot
-  entities:
-  - uid: 28405
-    components:
-    - type: Transform
-      pos: 22.5,-5.5
       parent: 2
 - proto: SpawnMobRaccoonMorticia
   entities:
