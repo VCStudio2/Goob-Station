@@ -6,8 +6,8 @@
 
 - type: entity
   id: ChronoPortal
-  name: "тахіонний портал"
-  description: "Виглядає футуристично."
+  name: tachyon portal
+  description: Looks futuristic.
   parent: [ BasePortal, BaseShadow ]
   components:
   - type: Portal
@@ -30,8 +30,8 @@
 
 - type: entity
   id: HellPortal
-  name: "пекельний портал"
-  description: "Куди б це не вело, добром це не скінчиться, виглядає дуже нестабільно, ніби може закритися будь-якої секунди."
+  name: hell portal
+  description: Wherever this leads can't be good, looks very unstable like it could collapse at any second.
   parent: [ BasePortal, BaseShadow ]
   components:
   - type: Portal
@@ -59,8 +59,8 @@
 
 - type: entity
   id: PortalHellExit
-  name: "Вихід з пекельного порталу"
+  name: PortalHellExit
   suffix: DO NOT MAP
-  description: "Мабуть, це була подорож в один кінець..."
+  description: Guess it was a one way trip...
   components:
   - type: HellPortalExit

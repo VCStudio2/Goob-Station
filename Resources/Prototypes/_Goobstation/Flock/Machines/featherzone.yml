@@ -1,8 +1,8 @@
 - type: entity
   id: FeatherzoneCockpit
   parent: BaseStructure
-  name: "кабіна шатла"
-  description: "Ви гадки не маєте, як керувати цією штукою!"
+  name: shuttle cockpit
+  description: You have no clue how to operate this thing!
   components:
   - type: Sprite
     sprite: _Goobstation/Flock/Structures/160x160/cockpit.rsi
@@ -37,8 +37,8 @@
 - type: entity
   id: FeatherzoneReactorOff
   parent: BaseStructure
-  name: "реактор зграї"
-  description: "Ви гадки не маєте, як керувати цією штукою!"
+  name: flock reactor
+  description: You have no clue how to operate this thing!
   components:
   - type: Sprite
     noRot: true
@@ -72,8 +72,8 @@
 - type: entity
   id: FeatherzoneReactorOn
   parent: FeatherzoneReactorOff
-  name: "реактор зграї"
-  description: "Ви гадки не маєте, як керувати цією штукою!"
+  name: flock reactor
+  description: You have no clue how to operate this thing!
   components:
   - type: Sprite
     noRot: true
@@ -100,8 +100,8 @@
 - type: entity
   id: FeatherzoneWing1
   parent: BaseStructure
-  name: "іскристе лезо"
-  description: "Звідси воно виглядає дуже крихким. І небезпечно напруженим. Краще не підходити надто близько."
+  name: sparking blade
+  description: It looks very fragile from here. And dangerously live. Best not get too close.
   placement:
     mode: SnapgridCenter
     snap:
@@ -139,8 +139,8 @@
 - type: entity
   id: FeatherzoneWingOff1
   parent: BaseStructure
-  name: "іскристе лезо"
-  description: "Звідси воно виглядає дуже крихким. І небезпечно напруженим. Краще не підходити надто близько."
+  name: sparking blade
+  description: It looks very fragile from here. And dangerously live. Best not get too close.
   placement:
     mode: SnapgridCenter
     snap:
@@ -178,8 +178,8 @@
 - type: entity
   id: FeatherzoneWingBroken1
   parent: BaseStructure
-  name: "зламане скляне крило"
-  description: "Зруйноване крило."
+  name: broken glass wing
+  description: A delapidated wing.
   placement:
     mode: SnapgridCenter
     snap:
@@ -217,8 +217,8 @@
 - type: entity
   id: FeatherzoneSignOff
   parent: BaseStructure
-  name: "дивний скляний знак"
-  description: "Здається, не працює."
+  name: strange glass sign
+  description: Doesn't seem to be working.
   components:
   - type: MeleeSound
     soundGroups:
@@ -233,8 +233,8 @@
 - type: entity
   id: FeatherzoneSign
   parent: BaseStructure
-  name: "дивний скляний знак"
-  description: "Занепокійливо гіпнотичний."
+  name: strange glass sign
+  description: Concerningly hypnotic.
   components:
   - type: MeleeSound
     soundGroups:
