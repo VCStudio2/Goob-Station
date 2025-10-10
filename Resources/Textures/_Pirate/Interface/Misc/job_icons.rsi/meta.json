@@ -65,11 +65,11 @@
         {
             "name": "attorney"
         },
-        
+
         {
             "name": "clerk"
         },
-        
+
         {
             "name": "prosecutor"
         },
@@ -102,6 +102,9 @@
         },
         {
             "name": "preacher"
+        },
+        {
+            "name": "vampire"
         }
     ]
 }

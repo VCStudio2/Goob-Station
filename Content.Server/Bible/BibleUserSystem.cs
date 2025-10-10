@@ -52,10 +52,14 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Timing;
 using Content.Shared.Verbs;
+using Content.Shared.Stunnable;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Content.Shared.Eye;
+using Robust.Shared.Containers; //Pirate
+using Robust.Shared.Timing; //Pirate
+using Content.Goobstation.Shared.Religion; //Pirate
 
 namespace Content.Server.Bible
 {
@@ -73,6 +77,8 @@ namespace Content.Server.Bible
         [Dependency] private readonly SharedTransformSystem _transform = default!;
         [Dependency] private readonly SharedEyeSystem _eye = default!;
 
+        [Dependency] private readonly SharedStunSystem _stun = default!; //Pirate
+
         public override void Initialize()
         {
             base.Initialize();
@@ -84,7 +90,8 @@ namespace Content.Server.Bible
             SubscribeLocalEvent<SummonableComponent, SummonActionEvent>(OnSummon);
             SubscribeLocalEvent<FamiliarComponent, MobStateChangedEvent>(OnFamiliarDeath);
             SubscribeLocalEvent<FamiliarComponent, GhostRoleSpawnerUsedEvent>(OnSpawned);
-            
+            SubscribeLocalEvent<BibleComponent, EntGotInsertedIntoContainerMessage>(OnInsertedContainer); // Pirate
+
         }
 
         private readonly Queue<EntityUid> _addQueue = new();
@@ -296,7 +303,22 @@ namespace Content.Server.Bible
         private void ViewFracture(Entity<BibleUserComponent> ent, ref ComponentInit args)
         {
             if (TryComp<EyeComponent>(ent, out var eye))
-            _eye.SetVisibilityMask(ent, eye.VisibilityMask | (int) VisibilityFlags.EldritchInfluenceSpent);
+                _eye.SetVisibilityMask(ent, eye.VisibilityMask | (int)VisibilityFlags.EldritchInfluenceSpent);
         }
+        //Pirate
+        private void OnInsertedContainer(EntityUid uid, BibleComponent component, EntGotInsertedIntoContainerMessage args)
+        {
+            //If an unholy creature picks up the bible, knock them down
+            if (HasComp<WeakToHolyComponent>(args.Container.Owner))
+            {
+                Timer.Spawn(500, () =>
+                {
+                    _stun.TryParalyze(args.Container.Owner, TimeSpan.FromSeconds(10), true);
+                    _damageableSystem.TryChangeDamage(args.Container.Owner, component.DamageOnUnholyUse);
+                    _audio.PlayPvs(component.SizzleSoundPath, args.Container.Owner);
+                });
+            }
+        }
+        //Pirate end
     }
 }

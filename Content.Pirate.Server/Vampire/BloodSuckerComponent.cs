@@ -1,4 +1,4 @@
-namespace Content.Pirate.Server.Traits.Vampirism.Components
+namespace Content.Pirate.Server.Vampirism.Components
 
 {
     [RegisterComponent]

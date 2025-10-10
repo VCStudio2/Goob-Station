@@ -9,8 +9,8 @@ using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chemistry.EntitySystems;
-using Content.Pirate.Shared.Traits.Vampirism.Events;
-using Content.Pirate.Server.Traits.Vampirism.Components;
+using Content.Pirate.Shared.Vampirism.Events;
+using Content.Pirate.Server.Vampirism.Components;
 //using Content.Shared.Cocoon;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
@@ -28,7 +28,7 @@ using Content.Shared.Access.Systems;
 using Content.Shared.Database;
 
 
-namespace Content.Pirate.Server.Traits.Vampirism.Systems
+namespace Content.Pirate.Server.Vampirism.Systems
 {
     public sealed class BloodSuckerSystem : EntitySystem
     {
