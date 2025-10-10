@@ -28,9 +28,22 @@ public sealed partial class LayingDownComponent : Component
 
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
     public bool AutoGetUp = true;
+
+    // Pirate start - port EE allow crawling entities to go under tables
+    [DataField, AutoNetworkedField]
+    public int? OriginalDrawDepth { get; set; }
+    // Pirate end - port EE allow crawling entities to go under tables
 }
 
 [Serializable, NetSerializable]
 public sealed class ChangeLayingDownEvent : CancellableEntityEventArgs;
 
 public sealed class CheckAutoGetUpEvent : EntityEventArgs;
+
+// Pirate start - port EE allow crawling entities to go under tables
+[Serializable, NetSerializable]
+public sealed class DrawDownedEvent(NetEntity uid) : EntityEventArgs
+{
+    public NetEntity Uid = uid;
+}
+// Pirate end - port EE allow crawling entities to go under tables

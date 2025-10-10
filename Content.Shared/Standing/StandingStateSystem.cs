@@ -27,15 +27,19 @@
 // if wizden ever does something to this system we're FUCKED
 // regards.
 
+using Content.Goobstation.Common.Standing; // Pirate - port EE allow crawling entities to go under tables
 using Content.Shared.Buckle;
 using Content.Shared.Buckle.Components;
+using Content.Shared.CCVar; // Pirate - port EE allow crawling entities to go under tables
 using Content.Shared.Hands.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Physics;
 using Content.Shared.Rotation;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration; // Pirate - port EE allow crawling entities to go under tables
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Serialization; // Pirate - port EE allow crawling entities to go under tables
 
 namespace Content.Shared.Standing;
 public sealed class StandingStateSystem : EntitySystem
@@ -45,6 +49,7 @@ public sealed class StandingStateSystem : EntitySystem
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!; // WD EDIT
     [Dependency] private readonly SharedBuckleSystem _buckle = default!; // WD EDIT
+    [Dependency] private readonly IConfigurationManager _config = default!; // Pirate - port EE allow crawling entities to go under tables
 
     // If StandingCollisionLayer value is ever changed to more than one layer, the logic needs to be edited.
     private const int StandingCollisionLayer = (int) CollisionGroup.MidImpassable;
@@ -120,6 +125,11 @@ public sealed class StandingStateSystem : EntitySystem
         standingState.CurrentState = StandingState.Lying;
         Dirty(uid, standingState);
         RaiseLocalEvent(uid, new DownedEvent(), false);
+
+        // Pirate start - port EE allow crawling entities to go under tables
+        if (_config.GetCVar(CCVars.CrawlUnderTables))
+            RaiseNetworkEvent(new DrawDownedEvent(GetNetEntity(uid)));
+        // Pirate end - port EE allow crawling entities to go under tables
 
         // Seemed like the best place to put it
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Horizontal, appearance);
