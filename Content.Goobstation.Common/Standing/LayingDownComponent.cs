@@ -21,29 +21,35 @@ namespace Content.Goobstation.Common.Standing;
 public sealed partial class LayingDownComponent : Component
 {
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
-    public float StandingUpTime { get; set; } = 1.5f;
+    public TimeSpan StandingUpTime = TimeSpan.FromSeconds(1); // Pirate - port EE togglable under-table crawling
 
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
-    public float SpeedModify { get; set; } = .3f;
+    // Pirate start - port EE togglable under-table crawling
+    public float LyingSpeedModifier = 0.35f,
+                 CrawlingUnderSpeedModifier = 0.5f;
+    // Pirate end - port EE togglable under-table crawling
 
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
     public bool AutoGetUp = true;
 
-    // Pirate start - port EE allow crawling entities to go under tables
+    // Pirate start - port EE togglable under-table crawling
+    /// <summary>
+    ///     If true, the entity is choosing to crawl under furniture. This is purely visual and has no effect on physics.
+    /// </summary>
     [DataField, AutoNetworkedField]
-    public int? OriginalDrawDepth { get; set; }
-    // Pirate end - port EE allow crawling entities to go under tables
+    public bool IsCrawlingUnder = false;
+
+    [DataField, AutoNetworkedField]
+    public int NormalDrawDepth = DrawDepth.Default + 6;
+
+    [DataField, AutoNetworkedField]
+    public int CrawlingUnderDrawDepth = DrawDepth.Default - 3;
+    // Pirate end - port EE togglable under-table crawling
+
+
 }
 
 [Serializable, NetSerializable]
 public sealed class ChangeLayingDownEvent : CancellableEntityEventArgs;
 
 public sealed class CheckAutoGetUpEvent : EntityEventArgs;
-
-// Pirate start - port EE allow crawling entities to go under tables
-[Serializable, NetSerializable]
-public sealed class DrawDownedEvent(NetEntity uid) : EntityEventArgs
-{
-    public NetEntity Uid = uid;
-}
-// Pirate end - port EE allow crawling entities to go under tables

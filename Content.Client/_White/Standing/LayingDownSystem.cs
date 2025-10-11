@@ -16,8 +16,8 @@ using Content.Shared.Rotation;
 using Content.Shared.Standing;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
+using Robust.Shared.Configuration; // Pirate - port EE togglable under-table crawling
 using Robust.Shared.Timing;
-using DrawDepth = Content.Shared.DrawDepth.DrawDepth; // Pirate - port EE allow crawling entities to go under tables
 
 namespace Content.Client._White.Standing;
 
@@ -34,11 +34,27 @@ public sealed class LayingDownSystem : SharedLayingDownSystem
         base.Initialize();
 
         SubscribeLocalEvent<LayingDownComponent, MoveEvent>(OnMovementInput);
-        // Pirate start - port EE allow crawling entities to go under tables
-        SubscribeNetworkEvent<DrawDownedEvent>(OnDowned);
-        SubscribeLocalEvent<LayingDownComponent, StoodEvent>(OnStood);
-        // Pirate end - port EE allow crawling entities to go under tables
     }
+
+    // Pirate start - port EE togglable under-table crawling
+    public override void Update(float frameTime)
+    {
+        // Update draw depth of laying down entities as necessary
+        var query = EntityQueryEnumerator<LayingDownComponent, StandingStateComponent, SpriteComponent>();
+        while (query.MoveNext(out var uid, out var layingDown, out var standing, out var sprite))
+        {
+            // Do not modify the entities draw depth if it's modified externally
+            if (sprite.DrawDepth != layingDown.NormalDrawDepth && sprite.DrawDepth != layingDown.CrawlingUnderDrawDepth)
+                continue;
+
+            sprite.DrawDepth = standing.CurrentState is StandingState.Lying && layingDown.IsCrawlingUnder
+                ? layingDown.CrawlingUnderDrawDepth
+                : layingDown.NormalDrawDepth;
+        }
+
+        query.Dispose();
+    }
+    // Pirate end - port EE togglable under-table crawling
 
     private void OnMovementInput(EntityUid uid, LayingDownComponent component, MoveEvent args)
     {
@@ -74,30 +90,6 @@ public sealed class LayingDownSystem : SharedLayingDownSystem
         sprite.Rotation = Angle.FromDegrees(90);
 
     }
-    // Pirate start - port EE allow crawling entities to go under tables
-    private void OnDowned(DrawDownedEvent args)
-    {
-        var uid = GetEntity(args.Uid);
-
-        if (!TryComp<SpriteComponent>(uid, out var sprite)
-            || !TryComp<LayingDownComponent>(uid, out var component))
-            return;
-
-        if (!component.OriginalDrawDepth.HasValue)
-            component.OriginalDrawDepth = sprite.DrawDepth;
-
-        sprite.DrawDepth = (int) DrawDepth.SmallMobs;
-    }
-
-    private void OnStood(EntityUid uid, LayingDownComponent component, StoodEvent args)
-    {
-        if (!TryComp<SpriteComponent>(uid, out var sprite) 
-            || !component.OriginalDrawDepth.HasValue)
-            return;
-
-        sprite.DrawDepth = component.OriginalDrawDepth.Value;
-    }
-    // Pirate end - port EE allow crawling entities to go under tables
 
     public override void UpdateSpriteRotation(EntityUid uid)
     {
