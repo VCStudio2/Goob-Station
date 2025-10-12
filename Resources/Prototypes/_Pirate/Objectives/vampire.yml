@@ -10,8 +10,7 @@
     issuer: vampire
   - type: RoleRequirement
     roles:
-      mindRoles:
-      - VampireRole
+    - ThiefRole
 
 - type: entity
   abstract: true
@@ -103,7 +102,7 @@
   components:
   - type: Objective
     icon:
-      sprite: Interface/_Pirate/Actions/actions_vampire.rsi
+      sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: survive_icon
 
 - type: entity
@@ -141,7 +140,7 @@
   components:
   - type: Objective
     icon:
-      sprite: Interface/_Pirate/Actions/actions_vampire.rsi
+      sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: blood_drain_icon
   - type: NumberObjective
     min: 100

@@ -45,7 +45,7 @@ public sealed partial class VampireComponent : Component
         Tags = new() { "Pill" }
     };
     [ValidatePrototypeId<MetabolizerTypePrototype>]
-    public static readonly string MetabolizerVampire = "Vampire";
+    public static readonly string MetabolizerVampire = "Vampiric";
     [ValidatePrototypeId<MetabolizerTypePrototype>]
     public static readonly string MetabolizerBloodsucker = "Bloodsucker";
 
@@ -66,7 +66,6 @@ public sealed partial class VampireComponent : Component
 
     public readonly List<ProtoId<EntityPrototype>> BaseVampireActions = new()
     {
-        "ActionVampireToggleFangs",
         "ActionVampireHypnotise"
     };
 

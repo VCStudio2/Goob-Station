@@ -93,6 +93,7 @@ public sealed partial class VampireSystem : EntitySystem
         //SubscribeLocalEvent<VampireComponent, VampireTargetedPowerEvent>(OnUseTargetedPower);
         SubscribeLocalEvent<VampireComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<VampireComponent, VampireBloodChangedEvent>(OnVampireBloodChangedEvent);
+        SubscribeLocalEvent<VampireComponent, VampireAddBloodEssenceEvent>(OnVampireAddBloodEssence);
 
         SubscribeLocalEvent<VampireComponent, AfterAutoHandleStateEvent>(GetState);
         SubscribeLocalEvent<VampireComponent, VampireMutationPrototypeSelectedMessage>(OnMutationSelected);
@@ -195,6 +196,12 @@ public sealed partial class VampireSystem : EntitySystem
     {
         if (HasComp<VampireFangsExtendedComponent>(uid) && args.IsInDetailsRange && !_food.IsMouthBlocked(uid))
             args.AddMarkup($"{Loc.GetString("vampire-fangs-extended-examine")}{Environment.NewLine}");
+    }
+
+    private void OnVampireAddBloodEssence(EntityUid uid, VampireComponent component, VampireAddBloodEssenceEvent args)
+    {
+        var vampire = new Entity<VampireComponent>(uid, component);
+        AddBloodEssence(vampire, args.Amount);
     }
     private bool AddBloodEssence(Entity<VampireComponent> vampire, FixedPoint2 quantity)
     {

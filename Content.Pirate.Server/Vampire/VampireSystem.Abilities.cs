@@ -53,7 +53,7 @@ public sealed partial class VampireSystem
 
         //Abilities
         SubscribeLocalEvent<VampireComponent, VampireOpenMutationsMenu>(OnVampireOpenMutationsMenu);
-        SubscribeLocalEvent<VampireComponent, VampireToggleFangsEvent>(OnVampireToggleFangs);
+        //SubscribeLocalEvent<VampireComponent, VampireToggleFangsEvent>(OnVampireToggleFangs);
         SubscribeLocalEvent<VampireComponent, VampireGlareEvent>(OnVampireGlare);
         SubscribeLocalEvent<VampireComponent, VampireScreechEvent>(OnVampireScreech);
         SubscribeLocalEvent<VampireComponent, VampirePolymorphEvent>(OnVampirePolymorph);
@@ -67,8 +67,8 @@ public sealed partial class VampireSystem
         SubscribeLocalEvent<VampireComponent, VampireHypnotiseDoAfterEvent>(HypnotiseDoAfter);
 
         //Drink Blood
-        SubscribeLocalEvent<VampireComponent, BeforeInteractHandEvent>(OnInteractHandEvent);
-        SubscribeLocalEvent<VampireComponent, VampireDrinkBloodDoAfterEvent>(DrinkDoAfter);
+        //SubscribeLocalEvent<VampireComponent, BeforeInteractHandEvent>(OnInteractHandEvent);
+        //SubscribeLocalEvent<VampireComponent, VampireDrinkBloodDoAfterEvent>(DrinkDoAfter);
 
         //Deaths embrace
         SubscribeLocalEvent<VampireDeathsEmbraceComponent, EntGotInsertedIntoContainerMessage>(OnInsertedIntoContainer);
@@ -83,6 +83,7 @@ public sealed partial class VampireSystem
         TryOpenUi(uid, ev.Performer, component);
         ev.Handled = true;
     }
+    /* I use BloodSucker instead
     private void OnVampireToggleFangs(EntityUid entity, VampireComponent component, VampireToggleFangsEvent ev)
     {
         if (!TryGetPowerDefinition(ev.DefinitionName, out var def))
@@ -102,7 +103,7 @@ public sealed partial class VampireSystem
         _action.SetToggled(actionEntity, toggled);
 
         ev.Handled = true;
-    }
+    }*/
     private void OnVampireGlare(EntityUid entity, VampireComponent component, VampireGlareEvent ev)
     {
         if (!TryGetPowerDefinition(ev.DefinitionName, out var def))
@@ -225,7 +226,7 @@ public sealed partial class VampireSystem
 
         ev.Handled = true;
     }
-    private void OnInteractHandEvent(EntityUid uid, VampireComponent component, BeforeInteractHandEvent args)
+    /*private void OnInteractHandEvent(EntityUid uid, VampireComponent component, BeforeInteractHandEvent args)
     {
         if (!HasComp<HumanoidAppearanceComponent>(args.Target))
             return;
@@ -239,7 +240,7 @@ public sealed partial class VampireSystem
         var vampire = new Entity<VampireComponent>(uid, component);
 
         args.Handled = TryDrink(vampire, args.Target, def.DoAfterDelay!.Value);
-    }
+    }*/
     #endregion
 
 
@@ -648,7 +649,7 @@ public sealed partial class VampireSystem
     /// <summary>
     /// Toggle if fangs are extended
     /// </summary>
-    private bool ToggleFangs(Entity<VampireComponent> vampire)
+    /*private bool ToggleFangs(Entity<VampireComponent> vampire)
     {
         if (HasComp<VampireFangsExtendedComponent>(vampire))
         {
@@ -776,7 +777,7 @@ public sealed partial class VampireSystem
 
             args.Repeat = true;
         }
-    }
+    }*/
     /// <summary>
     /// Attempt to insert the solution into the first stomach that has space available
     /// </summary>

@@ -5,4 +5,5 @@
   components:
   - type: MindRole
     antagPrototype: Vampire
+    subtype: role-subtype-Vampire
   - type: VampireRole

@@ -26,6 +26,12 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Utility;
 using Content.Shared.Access.Systems;
 using Content.Shared.Database;
+using Content.Pirate.Shared.Vampire;
+using Content.Goobstation.Maths.FixedPoint;
+using Content.Server.Atmos.Rotting;
+using Content.Server.Nutrition.EntitySystems;
+using Content.Pirate.Server.Vampire;
+using Content.Pirate.Shared.Vampire.Components;
 
 
 namespace Content.Pirate.Server.Vampirism.Systems
@@ -45,6 +51,8 @@ namespace Content.Pirate.Server.Vampirism.Systems
         [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly HungerSystem _hunger = default!;
+        [Dependency] private readonly FoodSystem _food = default!;
+        [Dependency] private readonly RottingSystem _rotting = default!;
 
         public override void Initialize()
         {
@@ -53,7 +61,7 @@ namespace Content.Pirate.Server.Vampirism.Systems
             SubscribeLocalEvent<BloodSuckedComponent, HealthBeingExaminedEvent>(OnHealthExamined);
             SubscribeLocalEvent<BloodSuckedComponent, DamageChangedEvent>(OnDamageChanged);
             SubscribeLocalEvent<BloodSuckerComponent, BloodSuckDoAfterEvent>(OnDoAfter);
-            SubscribeLocalEvent<BloodSuckerComponent, MoveEvent>(OnBloodSuckerMoved);
+            //SubscribeLocalEvent<BloodSuckerComponent, MoveEvent>(OnBloodSuckerMoved);
         }
 
         private void AddSuccVerb(EntityUid uid, BloodSuckerComponent component, GetVerbsEvent<InnateVerb> args)
@@ -119,18 +127,14 @@ namespace Content.Pirate.Server.Vampirism.Systems
             {
                 if (!_interactionSystem.InRangeUnobstructed(bloodsucker, victim))
                     return;
-
-                if (_inventorySystem.TryGetSlotEntity(victim, "head", out var headUid) && HasComp<PressureProtectionComponent>(headUid))
+                if (_food.IsMouthBlocked(victim))
                 {
-                    _popups.PopupEntity(Loc.GetString("bloodsucker-fail-helmet", ("helmet", headUid)), victim, bloodsucker, PopupType.Medium);
+                    _popups.PopupEntity(Loc.GetString("bloodsucker-fail-mouth-blocked", ("target", victim)), victim, bloodsucker, PopupType.Medium);
                     return;
                 }
-
-                if (_inventorySystem.TryGetSlotEntity(bloodsucker, "mask", out var maskUid) &&
-                    EntityManager.TryGetComponent<IngestionBlockerComponent>(maskUid, out var blocker) &&
-                    blocker.Enabled)
+                if (_rotting.IsRotten(victim))
                 {
-                    _popups.PopupEntity(Loc.GetString("bloodsucker-fail-mask", ("mask", maskUid)), victim, bloodsucker, PopupType.Medium);
+                    _popups.PopupEntity(Loc.GetString("vampire-blooddrink-rotted"), victim, bloodsucker, PopupType.Medium);
                     return;
                 }
             }
@@ -146,7 +150,9 @@ namespace Content.Pirate.Server.Vampirism.Systems
 
             var args = new DoAfterArgs(EntityManager, bloodsucker, bloodSuckerComponent.Delay, new BloodSuckDoAfterEvent(), bloodsucker, target: victim)
             {
-                BreakOnMove = false,
+                BreakOnMove = true,
+                BreakOnDamage = true,
+                MovementThreshold = 0.01f,
                 DistanceThreshold = 2f,
                 NeedHand = false
             };
@@ -166,7 +172,10 @@ namespace Content.Pirate.Server.Vampirism.Systems
 
             // No blood left, yikes.
             if (_bloodstreamSystem.GetBloodLevelPercentage((victim, bloodstream)) == 0.0f)
+            {
+                _popups.PopupEntity(Loc.GetString("bloodsucker-fail-no-blood", ("target", victim)), victim, bloodsucker, PopupType.Medium);
                 return false;
+            }
 
             // Does bloodsucker have a stomach?
             List<Entity<StomachComponent, OrganComponent>>? stomachList;
@@ -214,6 +223,13 @@ namespace Content.Pirate.Server.Vampirism.Systems
 
             _damageableSystem.TryChangeDamage(victim, damage, true, true);
 
+            // Add blood essence to vampire if bloodsucker is a vampire
+            if(HasComp<VampireComponent>(bloodsucker))
+            {
+                // Use helper to add blood essence from sucking
+                VampireBloodEssenceHelper.AddBloodEssenceFromSucking(EntityManager, bloodsucker, victim, temp.Volume.Float());
+            }
+
             //I'm not porting the nocturine gland, this code is deprecated, and will be reworked at a later date.
             //if (bloodsuckerComp.InjectWhenSucc && _solutionSystem.TryGetInjectableSolution(victim, out var injectable))
             //{
@@ -221,7 +237,7 @@ namespace Content.Pirate.Server.Vampirism.Systems
             //}
             return true;
         }
-        private void OnBloodSuckerMoved(EntityUid uid, BloodSuckerComponent component, ref MoveEvent args)
+        /*private void OnBloodSuckerMoved(EntityUid uid, BloodSuckerComponent component, ref MoveEvent args)
         {
             // Cancel any ongoing blood sucking doafter when vampire moves
             if (TryComp<DoAfterComponent>(uid, out var doAfterComp))
@@ -236,6 +252,6 @@ namespace Content.Pirate.Server.Vampirism.Systems
                 foreach (var id in toCancel)
                     _doAfter.Cancel(uid, id);
             }
-        }
+        }*/
     }
 }

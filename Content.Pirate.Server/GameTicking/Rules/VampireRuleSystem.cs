@@ -13,6 +13,7 @@ using Content.Goobstation.Shared.Bible;
 using Content.Shared.Alert;
 using Content.Shared.Body.Components;
 using Content.Pirate.Shared.Vampire.Components;
+using Content.Pirate.Server.Vampirism.Components;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Roles;
@@ -111,6 +112,7 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
 
         rule.VampireMinds.Add(mindId);
 
+        EnsureComp<BloodSuckerComponent>(vampire);
         _vampire.AddStartingAbilities(vampire);
         _vampire.MakeVulnerableToHoly(vampire);
         _alerts.ShowAlert(vampire, vampireAlertComponent.BloodAlert);
