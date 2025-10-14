@@ -125,6 +125,7 @@
   - CaptainMask # Goobstation - Lollypops!
   - CaptainBackpack
   - CaptainOuterClothing
+  - CommandSelfDefense # Pirate
   - Survival
   - Trinkets
   - Animals
@@ -145,6 +146,7 @@
   - HoPBackpack
   - HoPOuterClothing
   - Glasses
+  - CommandSelfDefense # Pirate
   - Survival
   - Trinkets
   - Animals
@@ -401,6 +403,7 @@
   - QuartermasterOuterClothing
   - QuartermasterShoes
   - Glasses
+  - CommandSelfDefense # Pirate
   - Survival
   - Trinkets
   - Animals
@@ -458,6 +461,7 @@
   - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
+  - CommandSelfDefense # Pirate
   - SurvivalExtended
   - Trinkets
   - Animals
@@ -532,6 +536,7 @@
   - ScientistGloves
   - ResearchDirectorShoes
   - MantisEyes
+  - CommandSelfDefense # Pirate
   - Survival
   - Trinkets
   - Animals
@@ -593,6 +598,7 @@
   - HeadofSecurityOuterClothing
   - HeadofSecurityShoes # Goobstation edit
   - SurvivalSecurity
+  - CommandSelfDefense # Pirate
   - Trinkets
   - SecurityStar
   - Animals
@@ -700,6 +706,7 @@
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
   - MedicalEyewear
+  - CommandSelfDefense # Pirate
   - SurvivalMedical
   - Trinkets
   - Animals
