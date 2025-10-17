@@ -35,7 +35,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineCaselessRifleStandartShort
+        startingItem: MagazineCaselessRifleStandardShort
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
@@ -44,7 +44,7 @@
             - MagazineCaselessRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeCaselessRifleStandart
+        startingItem: CartridgeCaselessRifleStandard
         priority: 1
         whitelist:
           tags:
@@ -107,7 +107,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineCaselessRifleStandart
+        startingItem: MagazineCaselessRifleStandard
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
@@ -116,7 +116,7 @@
             - MagazineCaselessRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeCaselessRifleStandart
+        startingItem: CartridgeCaselessRifleStandard
         priority: 1
         whitelist:
           tags:

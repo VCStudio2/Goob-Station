@@ -1,10 +1,10 @@
 - type: entity
-  id: MagazineCaselessRifleStandart
+  id: MagazineCaselessRifleStandard
   name: "magazine (9.5mm)"
   parent: BaseMagazineCaselessRifle
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeCaselessRifleStandart
+    proto: CartridgeCaselessRifleStandard
   - type: Sprite
     layers:
     - state: base
@@ -19,12 +19,12 @@
       - state: inhand-right-mag
 
 - type: entity
-  id: MagazineCaselessRifleStandartShort
+  id: MagazineCaselessRifleStandardShort
   name: "short magazine (9.5mm)"
   parent: BaseMagazineCaselessRifleShort
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeCaselessRifleStandart
+    proto: CartridgeCaselessRifleStandard
     capacity: 20
   - type: Sprite
     layers:

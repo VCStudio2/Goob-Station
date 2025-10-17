@@ -39,8 +39,8 @@
   cost: 10000
   recipeUnlocks:
   - WeaponSubMachineGunFPA90
-  - MagazineCaselessRifleStandartShort
-  - MagazineBoxCaselessRifleStandart
+  - MagazineCaselessRifleStandardShort
+  - MagazineBoxCaselessRifleStandard
   position: 7,0
   technologyPrerequisites:
   - WeaponAdvancedOneHandedFirearm
@@ -57,7 +57,7 @@
   cost: 15000
   recipeUnlocks:
   - WeaponSubMachineGunBRDIR25
-  - MagazineCaselessRifleStandart
+  - MagazineCaselessRifleStandard
   - MagazineCaselessRifleEmpty
   position: 8,1
   technologyPrerequisites:

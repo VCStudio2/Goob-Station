@@ -110,24 +110,24 @@
 # 9.5mm
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineCaselessRifleStandartShort
-  result: MagazineCaselessRifleStandartShort
+  id: MagazineCaselessRifleStandardShort
+  result: MagazineCaselessRifleStandardShort
   completetime: 5
   materials:
     Steel: 270
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineCaselessRifleStandart
-  result: MagazineCaselessRifleStandart
+  id: MagazineCaselessRifleStandard
+  result: MagazineCaselessRifleStandard
   completetime: 5
   materials:
     Steel: 400
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineBoxCaselessRifleStandart
-  result: MagazineBoxCaselessRifleStandart
+  id: MagazineBoxCaselessRifleStandard
+  result: MagazineBoxCaselessRifleStandard
   completetime: 5
   materials:
     Steel: 720

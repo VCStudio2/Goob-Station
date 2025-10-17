@@ -30,9 +30,9 @@
   - MagazineCaselessRifleEmpty
   - MagazineCaselessRifle
   - MagazineCaselessRifleShort
-  - MagazineCaselessRifleStandart
-  - MagazineCaselessRifleStandartShort
-  - MagazineBoxCaselessRifleStandart
+  - MagazineCaselessRifleStandard
+  - MagazineCaselessRifleStandardShort
+  - MagazineBoxCaselessRifleStandard
   - MagazineBoxCaselessRifle
   # .30
   - MagazineLightRifle
