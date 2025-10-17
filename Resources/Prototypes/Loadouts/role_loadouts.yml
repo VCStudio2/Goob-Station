@@ -426,10 +426,9 @@
   id: JobMusician
   groups:
   - GroupTankHarness
-  #- MusicianJumpsuit
+  - MusicianJumpsuit
   - CommonBackpack
   # Pirate wardrobe start VVV
-  - PirateMusicianJumpsuit
   - PiratePassengerHead
   - PiratePassengerOuterClothing
   - PiratePassengerShoes

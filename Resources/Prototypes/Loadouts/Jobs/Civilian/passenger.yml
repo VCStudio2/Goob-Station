@@ -165,13 +165,11 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: MasterGrey
-  groupBy: "NeckOther"
 
 - type: startingGear
   id: Mantle
   equipment:
     neck: ClothingNeckMantle
-  groupBy: "NeckOther"
 
 # Back
 - type: loadout
