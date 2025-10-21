@@ -50,8 +50,8 @@
       components:
         - Body
     event:
-     !type:VampireGlareEvent
-     definitionName: Glare
+      !type:VampireGlareEvent
+      definitionName: Glare
 
 - type: entity
   id: ActionVampireHypnotise
@@ -72,8 +72,7 @@
     whitelist:
       components:
       - HumanoidAppearance
-    event:
-     !type:VampireHypnotiseEvent
+    event: !type:VampireHypnotiseEvent
       definitionName: Hypnotise
 
 - type: entity
@@ -90,9 +89,8 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/_Pirate/Effects/Vampire/screech_tone.ogg
   - type: InstantAction
-    event:
-      !type:VampireScreechEvent
-      DefinitionName: Screech
+    event: !type:VampireScreechEvent
+      definitionName: Screech
 
 - type: entity
   id: ActionVampireBloodSteal
@@ -109,9 +107,8 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/demon_consume.ogg
   - type: InstantAction
-    event:
-      !type:VampireBloodStealEvent
-      DefinitionName: BloodSteal
+    event: !type:VampireBloodStealEvent
+      definitionName: BloodSteal
 
 - type: entity
   id: ActionVampireUnholyStrength
@@ -123,12 +120,11 @@
     icon:
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: unholystrength
-    useDelay: 60
+    useDelay: 10
     checkCanInteract: false
   - type: InstantAction
-    event:
-      !type:VampireUnholyStrengthEvent
-      DefinitionName: UnholyStrength
+    event: !type:VampireUnholyStrengthEvent
+      definitionName: UnholyStrength
 
 - type: entity
   id: ActionVampireSupernaturalStrength
@@ -140,12 +136,11 @@
     icon:
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: supernaturalstrength
-    useDelay: 60
+    useDelay: 10
     checkCanInteract: false
   - type: InstantAction
-    event:
-      !type:VampireSupernaturalStrengthEvent
-      DefinitionName: SupernaturalStrength
+    event: !type:VampireSupernaturalStrengthEvent
+      definitionName: SupernaturalStrength
 
 - type: entity
   id: ActionVampireBatform
@@ -161,9 +156,8 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/teleport_arrival.ogg
   - type: InstantAction
-    event:
-      !type:VampirePolymorphEvent
-      DefinitionName: PolymorphBat
+    event: !type:VampirePolymorphEvent
+      definitionName: PolymorphBat
 
 - type: entity
   id: ActionVampireMouseform
@@ -179,9 +173,8 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/teleport_arrival.ogg
   - type: InstantAction
-    event:
-      !type:VampirePolymorphEvent
-      DefinitionName: PolymorphMouse
+    event: !type:VampirePolymorphEvent
+      definitionName: PolymorphMouse
 
 - type: entity
   id: ActionVampireCloakOfDarkness
@@ -195,6 +188,5 @@
       state: cloakofdarkness
     useDelay: 10
   - type: InstantAction
-    event:
-      !type:VampireCloakOfDarknessEvent
-      DefinitionName: CloakOfDarkness
+    event: !type:VampireCloakOfDarknessEvent
+      definitionName: CloakOfDarkness

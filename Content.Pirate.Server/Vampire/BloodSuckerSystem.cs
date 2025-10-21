@@ -32,6 +32,7 @@ using Content.Server.Atmos.Rotting;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Pirate.Server.Vampire;
 using Content.Pirate.Shared.Vampire.Components;
+using Content.Goobstation.Shared.Religion;
 
 
 namespace Content.Pirate.Server.Vampirism.Systems
@@ -61,7 +62,6 @@ namespace Content.Pirate.Server.Vampirism.Systems
             SubscribeLocalEvent<BloodSuckedComponent, HealthBeingExaminedEvent>(OnHealthExamined);
             SubscribeLocalEvent<BloodSuckedComponent, DamageChangedEvent>(OnDamageChanged);
             SubscribeLocalEvent<BloodSuckerComponent, BloodSuckDoAfterEvent>(OnDoAfter);
-            //SubscribeLocalEvent<BloodSuckerComponent, MoveEvent>(OnBloodSuckerMoved);
         }
 
         private void AddSuccVerb(EntityUid uid, BloodSuckerComponent component, GetVerbsEvent<InnateVerb> args)
@@ -69,13 +69,6 @@ namespace Content.Pirate.Server.Vampirism.Systems
 
             var victim = args.Target;
             var ignoreClothes = false;
-
-            /*if (TryComp<CocoonComponent>(args.Target, out var cocoon))
-            {
-                victim = cocoon.Victim ?? args.Target;
-                ignoreClothes = cocoon.Victim != null;
-            } else if (component.WebRequired)
-                return;*/
 
             if (!TryComp<BloodstreamComponent>(victim, out var bloodstream) || args.User == victim || !args.CanAccess)
                 return;
@@ -227,7 +220,7 @@ namespace Content.Pirate.Server.Vampirism.Systems
             if(HasComp<VampireComponent>(bloodsucker))
             {
                 // Use helper to add blood essence from sucking
-                VampireBloodEssenceHelper.AddBloodEssenceFromSucking(EntityManager, bloodsucker, victim, temp.Volume.Float());
+                VampireBloodEssenceHelper.AddBloodEssenceFromSucking(EntityManager, bloodsucker, victim, temp.Volume.Float() * 2.0f);
             }
 
             //I'm not porting the nocturine gland, this code is deprecated, and will be reworked at a later date.
@@ -237,21 +230,5 @@ namespace Content.Pirate.Server.Vampirism.Systems
             //}
             return true;
         }
-        /*private void OnBloodSuckerMoved(EntityUid uid, BloodSuckerComponent component, ref MoveEvent args)
-        {
-            // Cancel any ongoing blood sucking doafter when vampire moves
-            if (TryComp<DoAfterComponent>(uid, out var doAfterComp))
-            {
-                var toCancel = new List<ushort>();
-                foreach (var (id, doAfter) in doAfterComp.DoAfters)
-                {
-                    if (doAfter.Args.Event is BloodSuckDoAfterEvent)
-                        toCancel.Add(id);
-                }
-
-                foreach (var id in toCancel)
-                    _doAfter.Cancel(uid, id);
-            }
-        }*/
     }
 }

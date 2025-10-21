@@ -1,9 +1,5 @@
 vampires-title = Вампіри
 
-vampire-fangs-extended-examine = Ти бачиш блиск [color=white]гострих зубів[/color]
-vampire-fangs-extended = Ти витягуєш свої ікла
-vampire-fangs-retracted = Ти втягуєш свої ікла
-
 vampire-blooddrink-empty = Це тіло позбавлене крові
 vampire-blooddrink-rotted = Їхнє тіло гниє, а кров зіпсована
 vampire-blooddrink-zombie = Їхня кров зіпсована смертю
@@ -68,7 +64,7 @@ vampire-mutation-umbrae-info = Тінь
 
     - Нульовий Погляд
     - Плащ Темряви
-    
+
 vampire-mutation-gargantua-info = Гаргантюа
 
     Зосереджується на ближньому бою та стійкості.

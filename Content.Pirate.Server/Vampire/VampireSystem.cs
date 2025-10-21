@@ -184,7 +184,10 @@ public sealed partial class VampireSystem : EntitySystem
                 if (!SubtractBloodEssence((uid, vampire), strength.Upkeep) || _vampire.GetBloodEssence(uid) < bloodNeed)
                 {
                     var vampireUid = new Entity<VampireComponent>(uid, vampire);
-                    UnnaturalStrength(vampireUid);
+                    if (bloodNeed == FixedPoint2.New(200))
+                        UnnaturalStrength(vampireUid);
+                    else
+                        SupernaturalStrength(vampireUid);
                     _popup.PopupEntity(Loc.GetString("vampire-cloak-disable"), uid, uid);
                 }
             }

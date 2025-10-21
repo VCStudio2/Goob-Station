@@ -14,11 +14,13 @@ using Content.Shared.Alert;
 using Content.Shared.Body.Components;
 using Content.Pirate.Shared.Vampire.Components;
 using Content.Pirate.Server.Vampirism.Components;
+using Content.Goobstation.Shared.Religion;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Roles;
 using Content.Shared.Store;
 using Content.Shared.Store.Components;
+using Content.Shared.Mind;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Nutrition.Components;
@@ -43,6 +45,9 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
     [Dependency] private readonly BodySystem _body = default!;
 
     public readonly SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/_Pirate/Ambience/Antag/vampire_start.ogg");
+
+    [ValidatePrototypeId<EntityPrototype>]
+    private const string MindRole = "MindRoleVampire";
 
     public readonly ProtoId<AntagPrototype> VampirePrototypeId = "Vampire";
 
@@ -74,19 +79,18 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
             return false;
 
+        _role.MindAddRole(mindId, MindRole, mind, true);
+
         // briefing
         if (TryComp<MetaDataComponent>(target, out var metaData))
         {
             var briefing = Loc.GetString("vampire-role-greeting", ("name", metaData?.EntityName ?? "Unknown"));
             var briefingShort = Loc.GetString("vampire-role-greeting-short", ("name", metaData?.EntityName ?? "Unknown"));
 
-            _role.MindHasRole<VampireRoleComponent>(mindId, out var vampireRole);
-            _role.MindHasRole<RoleBriefingComponent>(mindId, out var briefingComp);
-            if (vampireRole is not null && briefingComp is null)
-            {
-                AddComp<RoleBriefingComponent>(vampireRole.Value.Owner);
-                Comp<RoleBriefingComponent>(vampireRole.Value.Owner).Briefing = briefing;
-            }
+            _antag.SendBriefing(target, briefing, Color.Red, BriefingSound);
+
+            if (_role.MindHasRole<VampireRoleComponent>(mindId, out var mr))
+                AddComp(mr.Value, new RoleBriefingComponent { Briefing = briefingShort }, overwrite: true);
         }
         // vampire stuff
         _npcFaction.RemoveFaction(target, NanotrasenFactionId, false);
@@ -113,6 +117,7 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         rule.VampireMinds.Add(mindId);
 
         EnsureComp<BloodSuckerComponent>(vampire);
+        EnsureComp<WeakToHolyComponent>(vampire).AlwaysTakeHoly = true;
         _vampire.AddStartingAbilities(vampire);
         _vampire.MakeVulnerableToHoly(vampire);
         _alerts.ShowAlert(vampire, vampireAlertComponent.BloodAlert);

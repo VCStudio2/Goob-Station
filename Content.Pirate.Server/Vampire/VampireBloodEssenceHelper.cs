@@ -39,12 +39,12 @@ namespace Content.Pirate.Server.Vampire
         /// <param name="entityManager">Entity manager instance</param>
         /// <param name="vampire">The vampire entity</param>
         /// <param name="victim">The victim entity</param>
-        /// <param name="bloodVolume">Volume of blood sucked</param>
-        /// <param name="conversionRate">Rate to convert blood volume to essence (default 0.5)</param>
+        /// <param name="bloodVolume">Volume of blood sucked as FixedPoint2</param>
+        /// <param name="conversionRate">Rate to convert blood volume to essence (default 1)</param>
         /// <returns>True if blood essence was added successfully</returns>
-        public static bool AddBloodEssenceFromSucking(IEntityManager entityManager, EntityUid vampire, EntityUid victim, float bloodVolume, float conversionRate = 0.5f)
+        public static bool AddBloodEssenceFromSucking(IEntityManager entityManager, EntityUid vampire, EntityUid victim, FixedPoint2 bloodVolume, float conversionRate = 1f)
         {
-            var essenceAmount = FixedPoint2.New(bloodVolume * conversionRate);
+            var essenceAmount = bloodVolume * conversionRate;
             return AddBloodEssence(entityManager, vampire, essenceAmount, victim);
         }
     }

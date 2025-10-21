@@ -7,10 +7,10 @@
   components:
   - type: Objective
     difficulty: 1.5
-    issuer: vampire
+    issuer: objective-issuer-vampire
   - type: RoleRequirement
     roles:
-    - ThiefRole
+    - VampireRole
 
 - type: entity
   abstract: true

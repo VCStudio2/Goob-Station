@@ -33,11 +33,11 @@ using Content.Pirate.Shared.Vampire.Components;
 using Content.Shared.Weapons.Melee;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Body.Organ;
-
 
 namespace Content.Pirate.Server.Vampire;
 
@@ -136,12 +136,10 @@ public sealed partial class VampireSystem
     {
         if (!TryGetPowerDefinition(ev.DefinitionName, out var def))
             return;
-
         var vampire = new Entity<VampireComponent>(entity, component);
 
         if (!IsAbilityUsable(vampire, def))
             return;
-
         PolymorphSelf(vampire, def.PolymorphTarget);
 
         ev.Handled = true;
@@ -150,7 +148,6 @@ public sealed partial class VampireSystem
     {
         if (!TryGetPowerDefinition(ev.DefinitionName, out var def))
             return;
-
         var vampire = new Entity<VampireComponent>(entity, component);
 
         if (!IsAbilityUsable(vampire, def))
@@ -244,7 +241,7 @@ public sealed partial class VampireSystem
     #endregion
 
 
-    private bool TryGetPowerDefinition(string name, [NotNullWhen(true)] out VampirePowerProtype? definition)
+    private bool TryGetPowerDefinition(ProtoId<VampirePowerProtype> name, [NotNullWhen(true)] out VampirePowerProtype? definition)
         => _powerCache.TryGetValue(name, out definition);
 
     private bool IsAbilityUsable(Entity<VampireComponent> vampire, VampirePowerProtype def)
@@ -386,7 +383,6 @@ public sealed partial class VampireSystem
     {
         if (string.IsNullOrEmpty(polymorphTarget))
             return;
-
         var prototypeId = polymorphTarget switch
         {
             "MobMouse" => "VampireMouse",
@@ -396,13 +392,11 @@ public sealed partial class VampireSystem
 
         if (prototypeId == null)
         {
-            Logger.Warning($"Unknown polymorph target: {polymorphTarget}. Polymorph operation aborted.");
             return;
         }
 
         if (!_prototypeManager.TryIndex<PolymorphPrototype>(prototypeId, out var prototype))
         {
-            Logger.Warning($"Unknown prototype: {prototypeId}. Polymorph operation aborted.");
             return;
         }
 
@@ -447,15 +441,15 @@ public sealed partial class VampireSystem
                 if (!TryComp<BloodstreamComponent>(entity, out var bloodstream) || bloodstream.BloodSolution == null)
                     continue;
 
-                //Transfer 80% to the vampire
-                var bloodSolution = _solution.SplitSolution(bloodstream.BloodSolution.Value, volumeToConsume * 0.80);
+                //Transfer 80% to the vampire Pirate - 100%
+                var bloodSolution = _solution.SplitSolution(bloodstream.BloodSolution.Value, volumeToConsume * 1);
                 //And spill 20% on the floor
-                _blood.TryModifyBloodLevel(entity, -(volumeToConsume * 0.2));
+                //_blood.TryModifyBloodLevel(entity, -(volumeToConsume * 0.2));
 
                 //Dont check this time, if we are full - just continue anyway
                 TryIngestBlood(vampire, bloodSolution);
 
-                AddBloodEssence(vampire, volumeToConsume * 0.80);
+                AddBloodEssence(vampire, volumeToConsume * 2);
 
                 _beam.TryCreateBeam(vampire, entity, "VampireLightning");
 

@@ -153,7 +153,7 @@
       groups:
         Brute: 15
         Airloss: 15
-    damageOnUnholyUse: ## What an unholy creature takes when picking up the bible
+    damageOnUnholyUse: ## Pirate - What an unholy creature takes when picking up the bible
       groups:
         Burn: 20
     damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone

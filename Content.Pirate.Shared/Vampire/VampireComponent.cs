@@ -69,8 +69,7 @@ public sealed partial class VampireComponent : Component
         "ActionVampireHypnotise"
     };
 
-    [ValidatePrototypeId<VampirePowerProtype>]
-    public static readonly string DrinkBloodPrototype = "DrinkBlood";
+    //public static readonly ProtoId<VampirePowerProtype> DrinkBloodPrototype = "DrinkBlood";
 
     /// <summary>
     /// Total blood drank, counter for end of round screen

@@ -177,6 +177,47 @@
     tags:
       - MidroundAntag
 
+# Pirate start
+# Midround Vampires
+- type: entity
+  parent: Vampire
+  id: VampireMidround
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    weight: 2
+    minimumPlayers: 5
+    duration: null
+    occursDuringRoundEnd: false
+    chaos:
+      Hostile: 100
+      Medical: 50
+      Death: 50
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 100
+  - type: AntagSelection
+    selectionTime: PostPlayerSpawn
+    agentName: vampire-roundend-name
+    definitions:
+    - prefRoles: [ Vampire ]
+      max: 1
+      playerRatio: 15
+      blacklist:
+        components:
+        - CommandStaff
+        - AntagImmune
+        - BibleUser
+        - Changeling
+      lateJoinAdditional: true
+      jobBlacklist: [ Chaplain ]
+      mindRoles:
+      - MindRoleVampire
+  - type: Tag
+    tags:
+      - MidroundAntag
+# Pirate end
+
 # Skeleton Spawn
 - type: entity
   parent: BaseGameRule

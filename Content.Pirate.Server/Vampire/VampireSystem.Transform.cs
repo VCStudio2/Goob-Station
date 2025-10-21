@@ -122,7 +122,7 @@ public sealed partial class VampireSystem
             {
                 if (instantActionComponent.Event is VampireSelfPowerEvent instantActionEvent)
                 {
-                    comp.UnlockedPowers.Add(instantActionEvent.DefinitionName, GetNetEntity(action));
+                    comp.UnlockedPowers.Add(instantActionEvent.DefinitionName.Id, GetNetEntity(action));
                 }
             }
 
@@ -130,7 +130,7 @@ public sealed partial class VampireSystem
             {
                 if (entityActionComponent.Event is VampireTargetedPowerEvent entityActionEvent)
                 {
-                    comp.UnlockedPowers.Add(entityActionEvent.DefinitionName, GetNetEntity(action));
+                    comp.UnlockedPowers.Add(entityActionEvent.DefinitionName.Id, GetNetEntity(action));
                 }
             }
         }

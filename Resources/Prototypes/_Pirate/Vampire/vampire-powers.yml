@@ -5,13 +5,13 @@
 
 - type: vampirePower
   id: ToggleFangs
-  
+
 - type: vampirePower
   id: MutationsMenu
 
-- type: vampirePower
-  id: DrinkBlood
-  doAfterDelay: 1
+#- type: vampirePower
+#  id: DrinkBlood
+#  doAfterDelay: 1
 
 - type: vampirePower
   id: Glare
@@ -59,21 +59,21 @@
   upkeep: 1
 
 - type: vampirePower
-  id: UnholyStrength 
+  id: UnholyStrength
   usableWhileStunned: false
   usableWhileCuffed: false
   activationCost: 30
   upkeep: 1
 
 - type: vampirePower
-  id: SupernaturalStrength 
+  id: SupernaturalStrength
   usableWhileStunned: false
   usableWhileCuffed: false
   activationCost: 30
   upkeep: 1
 
 - type: vampirePassive
-  id: DeathsEmbrace 
+  id: DeathsEmbrace
   catalogEntry: VampireDeathsEmbrace # Must match the catalog id
   compsToAdd:
   - type: VampireDeathsEmbrace

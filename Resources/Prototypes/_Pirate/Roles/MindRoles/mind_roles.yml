@@ -5,5 +5,7 @@
   components:
   - type: MindRole
     antagPrototype: Vampire
-    subtype: role-subtype-Vampire
+    exclusiveAntag: true
+    roleType: SoloAntagonist
+    subtype: vampire-roundend-name
   - type: VampireRole
