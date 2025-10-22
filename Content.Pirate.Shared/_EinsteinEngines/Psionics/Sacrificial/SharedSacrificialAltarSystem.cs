@@ -4,7 +4,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Verbs;
 
-namespace Content.Pirate.Shared.Chapel;
+namespace Content.Pirate.Shared.Sacrifice;
 
 public abstract partial class SharedSacrificialAltarSystem : EntitySystem
 {

@@ -4,7 +4,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Content.Shared.Database;
-using Content.Pirate.Shared.Chapel;
+using Content.Pirate.Shared.Sacrifice;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind;
@@ -15,7 +15,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Pirate.Server.Chapel;
+namespace Content.Pirate.Server.Sacrifice;
 
 public sealed class SacrificialAltarSystem : SharedSacrificialAltarSystem
 {

@@ -581,7 +581,7 @@
     #- EngineeringBoardsStatic - Goobstation - Moved to Scifab and Engifab
     - CircuitFloorsStatic
     # Goobstation Packs
-    - SharedBoardsStatic
+    #- SharedBoardsStatic Pirate removed
     - MedicalBoardsStaticGoob
     - SecurityBoardsStaticGoob
     dynamicPacks:

@@ -1,5 +1,5 @@
 using Content.Shared.Body.Components;
-using Content.Server.Body.Events;
+using Content.Shared.Body.Events;
 using Content.Pirate.Server.Traits.BloodDeficiency.Components;
 using Content.Goobstation.Maths.FixedPoint;
 

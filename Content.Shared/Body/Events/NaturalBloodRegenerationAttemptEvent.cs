@@ -1,6 +1,6 @@
 using Content.Goobstation.Maths.FixedPoint;
 
-namespace Content.Server.Body.Events;
+namespace Content.Shared.Body.Events;
 
 // Pirate I hope its related enough to the files around so I dont have to move it to Pirate
 /// <summary>

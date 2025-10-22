@@ -1102,6 +1102,9 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorBeret
+  - MantisTinfoil
+  - MantisHelmet
+  - MantisFez
 
 - type: loadoutGroup
   id: ResearchDirectorNeck

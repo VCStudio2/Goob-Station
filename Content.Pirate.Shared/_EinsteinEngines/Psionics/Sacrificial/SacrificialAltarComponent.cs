@@ -4,7 +4,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Pirate.Shared.Chapel;
+namespace Content.Pirate.Shared.Sacrifice;
 
 /// <summary>
 ///     Altar that lets you sacrifice psionics to lower glimmer by a large amount.
@@ -26,7 +26,7 @@ public sealed partial class SacrificialAltarComponent : Component
     public TimeSpan SacrificeTime = TimeSpan.FromSeconds(8.35);
 
     [DataField]
-    public SoundSpecifier SacrificeSound = new SoundPathSpecifier("/Audio/Psionics/heartbeat_fast.ogg");
+    public SoundSpecifier SacrificeSound = new SoundPathSpecifier("/Audio/_EinsteinEngines/Psionics/heartbeat_fast.ogg");
 
     [DataField]
     public EntityUid? SacrificeStream;
@@ -35,7 +35,7 @@ public sealed partial class SacrificialAltarComponent : Component
     ///     Base amount to reduce glimmer by, multiplied by the victim's Amplification stat.
     /// </summary>
     [DataField]
-    public float GlimmerReduction = -25;
+    public float GlimmerReduction = -50;
 
     [DataField]
     public List<ProtoId<WeightedRandomEntityPrototype>>? RewardPool;
