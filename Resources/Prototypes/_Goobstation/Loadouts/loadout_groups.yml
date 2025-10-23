@@ -1152,6 +1152,7 @@
   minLimit: 0
   loadouts:
   - Bodycam # Goobstation - Body cameras
+  - CameraCollar # Pirate
   - ClothingNeckCWPSec
 
 #honkops
@@ -1385,8 +1386,6 @@
   name: loadout-group-security-melee
   loadouts:
   - SecurityMeleeKnife
-  - SecurityMeleePolyBaton
-  - SecurityMeleeSpear
 
 # Zookeeper
 
