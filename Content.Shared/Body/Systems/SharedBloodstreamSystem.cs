@@ -17,8 +17,6 @@ using Content.Shared.Drunk;
 using Content.Shared.Fluids;
 using Content.Shared.Forensics.Components;
 using Content.Shared.HealthExaminable;
-using Content.Shared.Nutrition.EntitySystems; // Pirate
-using Content.Shared.Nutrition.Components; // Pirate
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Random.Helpers;
@@ -46,8 +44,6 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedDrunkSystem _drunkSystem = default!;
     [Dependency] private readonly SharedStutteringSystem _stutteringSystem = default!;
-    [Dependency] private readonly HungerSystem _hunger = default!; // Pirate
-    [Dependency] private readonly ThirstSystem _thirst = default!; // Pirate
 
     public override void Initialize()
     {
@@ -84,22 +80,20 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem
                 continue;
 
             // Adds blood to their blood level if it is below the maximum; Blood regeneration. Must be alive.
-            //if (bloodSolution.Volume < bloodSolution.MaxVolume && !_mobStateSystem.IsDead(uid))
-            //{
-            //    TryModifyBloodLevel((uid, bloodstream), bloodstream.BloodRefreshAmount);
-            //}
-            if (!_mobStateSystem.IsDead(uid)) // Pirate
-                TryDoNaturalRegeneration((uid, bloodstream), bloodSolution); // Pirate
+            if (bloodSolution.Volume < bloodSolution.MaxVolume && !_mobStateSystem.IsDead(uid))
+            {
+                TryModifyBloodLevel((uid, bloodstream), bloodstream.BloodRefreshAmount);
+            }
 
-                // Removes blood from the bloodstream based on bleed amount (bleed rate)
-                // as well as stop their bleeding to a certain extent.
-                if (bloodstream.BleedAmount > 0)
-                {
-                    // Blood is removed from the bloodstream at a 1-1 rate with the bleed amount
-                    TryModifyBloodLevel((uid, bloodstream), -bloodstream.BleedAmount);
-                    // Bleed rate is reduced by the bleed reduction amount in the bloodstream component.
-                    TryModifyBleedAmount((uid, bloodstream), -bloodstream.BleedReductionAmount);
-                }
+            // Removes blood from the bloodstream based on bleed amount (bleed rate)
+            // as well as stop their bleeding to a certain extent.
+            if (bloodstream.BleedAmount > 0)
+            {
+                // Blood is removed from the bloodstream at a 1-1 rate with the bleed amount
+                TryModifyBloodLevel((uid, bloodstream), -bloodstream.BleedAmount);
+                // Bleed rate is reduced by the bleed reduction amount in the bloodstream component.
+                TryModifyBleedAmount((uid, bloodstream), -bloodstream.BleedReductionAmount);
+            }
 
             // deal bloodloss damage if their blood level is below a threshold.
             var bloodPercentage = GetBloodLevelPercentage((uid, bloodstream));
@@ -175,7 +169,7 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem
 
             var missingBlood = bloodstream.BloodMaxVolume - bloodstream.BloodSolution.Value.Comp.Solution.Volume;
 
-            bloodstream.BleedAmount = (float)total / 4;
+            bloodstream.BleedAmount = (float) total / 4;
             if (!_consciousness.SetConsciousnessModifier(
                     uid,
                     nerveSys.Value,
@@ -596,45 +590,4 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem
 
         return bloodData;
     }
-
-    // Pirate VVV
-    /// <summary>
-    ///     Tries to apply natural blood regeneration/loss to the entity. Returns true if succesful.
-    /// </summary>
-    private bool TryDoNaturalRegeneration(Entity<BloodstreamComponent> ent, Solution bloodSolution)
-    {
-        var ev = new NaturalBloodRegenerationAttemptEvent { Amount = ent.Comp.BloodRefreshAmount };
-        RaiseLocalEvent(ent, ref ev);
-
-        if (ev.Cancelled || (ev.Amount > 0 && bloodSolution.Volume >= bloodSolution.MaxVolume))
-            return false;
-
-        var usedHunger = ev.Amount * ent.Comp.BloodRegenerationHunger;
-        var usedThirst = ev.Amount * ent.Comp.BloodRegenerationThirst;
-
-        // First, check if the entity has enough hunger/thirst
-        var hungerComp = CompOrNull<HungerComponent>(ent);
-        var thirstComp = CompOrNull<ThirstComponent>(ent);
-        if (usedHunger > 0 && hungerComp is not null && (_hunger.GetHunger(hungerComp) < usedHunger || hungerComp.CurrentThreshold <= HungerThreshold.Starving)
-            || usedThirst > 0 && thirstComp is not null && (thirstComp.CurrentThirst < usedThirst || thirstComp.CurrentThirstThreshold <= ThirstThreshold.Parched))
-            return false;
-
-        // Then actually expend hunger and thirst (if necessary) and regenerate blood.
-        if (usedHunger > 0 && hungerComp is not null)
-            _hunger.ModifyHunger(ent, (float)-usedHunger, hungerComp);
-
-        if (usedThirst > 0 && thirstComp is not null)
-            _thirst.ModifyThirst(ent, thirstComp, (float)-usedThirst);
-        if (ev.Amount > 0)
-        {
-            if (ent.Comp.BloodSolution == null)
-                return false;
-            return SolutionContainer.TryAddReagent(ent.Comp.BloodSolution.Value, ent.Comp.BloodReagent, ev.Amount, out _, null, GetEntityBloodData(ent.Owner));
-        }
-
-        if (ent.Comp.BloodSolution == null)
-            return false;
-        return SolutionContainer.RemoveReagent(ent.Comp.BloodSolution.Value, ent.Comp.BloodReagent, -ev.Amount);
-    }
-    // Pirate ^^^
 }

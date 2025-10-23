@@ -1,8 +1,9 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Goobstation.Maths.FixedPoint;
 
 namespace Content.Shared.Body.Events;
 
-// Pirate I hope its related enough to the files around so I dont have to move it to Pirate
 /// <summary>
 ///     Raised on a mob when its bloodstream tries to perform natural blood regeneration.
 /// </summary>
