@@ -20,7 +20,7 @@
 - type: vampirePower
   id: Hypnotise
   duration: 60
-  doAfterDelay: 5
+  doAfterDelay: 0
 
 - type: vampirePower
   id: Screech
@@ -77,12 +77,14 @@
   usableWhileStunned: false
   usableWhileCuffed: false
   activationCost: 200
+  doAfterDelay: 4
 
 - type: vampirePower
   id: DarkGift
   usableWhileStunned: false
   usableWhileCuffed: false
-  activationCost: 200
+  activationCost: 100
+  doAfterDelay: 3
 
 - type: vampirePassive
   id: DeathsEmbrace

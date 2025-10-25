@@ -19,6 +19,7 @@ using Content.Server.Body.Systems;
 using Content.Server.Popups;
 using Content.Server.DoAfter;
 using Content.Server.Nutrition.Components;
+using Content.Server.Mind;
 using Content.Shared.HealthExaminable;
 using Content.Shared.Body.Organ;
 using Robust.Shared.Prototypes;
@@ -40,6 +41,7 @@ namespace Content.Pirate.Server.Vampirism.Systems
     public sealed class BloodSuckerSystem : EntitySystem
     {
         [Dependency] private readonly BodySystem _bodySystem = default!;
+        [Dependency] private readonly MindSystem _mind = default!;
         [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
         [Dependency] private readonly PopupSystem _popups = default!;
         [Dependency] private readonly DoAfterSystem _doAfter = default!;
@@ -54,6 +56,8 @@ namespace Content.Pirate.Server.Vampirism.Systems
         [Dependency] private readonly HungerSystem _hunger = default!;
         [Dependency] private readonly FoodSystem _food = default!;
         [Dependency] private readonly RottingSystem _rotting = default!;
+
+        [Dependency] private readonly VampireSystem _vampireSystem = default!;
 
         public override void Initialize()
         {
@@ -224,6 +228,19 @@ namespace Content.Pirate.Server.Vampirism.Systems
             {
                 // Use helper to add blood essence from sucking
                 VampireBloodEssenceHelper.AddBloodEssenceFromSucking(EntityManager, bloodsucker, victim, temp.Volume.Float() * 2.0f);
+
+                // Update objective progress (Drain N blood)
+                if (_mind.TryGetMind(bloodsucker, out var mindId, out var mind))
+                {
+                    if (_mind.TryGetObjectiveComp<Content.Pirate.Server.Objectives.Components.BloodDrainConditionComponent>(mindId, out var objective, mind))
+                    {
+                        // Track by total drank essence (already updated by AddBloodEssence);
+                        if (TryComp<VampireComponent>(bloodsucker, out var vampComp))
+                            _vampireSystem.SetBloodDrainProgress(bloodsucker, vampComp.TotalBloodDrank);
+                        else
+                            _vampireSystem.AddBloodDrainProgress(bloodsucker, temp.Volume.Float());
+                    }
+                }
             }
 
             //I'm not porting the nocturine gland, this code is deprecated, and will be reworked at a later date.

@@ -46,6 +46,10 @@ using Robust.Shared.Prototypes;
 using System.Linq;
 using Content.Shared.Charges.Systems;
 using Content.Shared.Charges.Components;
+using Content.Shared.NPC.Systems;
+using Content.Shared.NPC.Prototypes;
+using Content.Server.Antag;
+using Content.Pirate.Server.GameTicking.Rules;
 
 namespace Content.Pirate.Server.Vampire;
 
@@ -84,6 +88,9 @@ public sealed partial class VampireSystem : EntitySystem
     [Dependency] private readonly MetabolizerSystem _metabolism = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedVampireSystem _vampire = default!;
+    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
+    [Dependency] private readonly AntagSelectionSystem _antag = default!;
+    [Dependency] private readonly VampireRuleSystem _vampireRules = default!;
 
     public override void Initialize()
     {

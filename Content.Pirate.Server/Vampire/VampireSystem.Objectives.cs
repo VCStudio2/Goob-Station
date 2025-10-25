@@ -15,6 +15,22 @@ public sealed partial class VampireSystem
         SubscribeLocalEvent<BloodDrainConditionComponent, ObjectiveGetProgressEvent>(OnBloodDrainGetProgress);
     }
 
+    public void SetBloodDrainProgress(EntityUid vampire, float total)
+    {
+        if (!_mind.TryGetMind(vampire, out var mindId, out var mind))
+            return;
+        if (_mind.TryGetObjectiveComp<BloodDrainConditionComponent>(mindId, out var objective, mind))
+            objective.BloodDranked = total;
+    }
+
+    public void AddBloodDrainProgress(EntityUid vampire, float delta)
+    {
+        if (!_mind.TryGetMind(vampire, out var mindId, out var mind))
+            return;
+        if (_mind.TryGetObjectiveComp<BloodDrainConditionComponent>(mindId, out var objective, mind))
+            objective.BloodDranked += delta;
+    }
+
     private void OnBloodDrainGetProgress(EntityUid uid, BloodDrainConditionComponent comp, ref ObjectiveGetProgressEvent args)
     {
         var target = _number.GetTarget(uid);

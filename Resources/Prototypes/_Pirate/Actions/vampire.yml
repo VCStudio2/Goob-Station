@@ -202,10 +202,9 @@
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: sire
     useDelay: 10
-    checkCanInteract: false
+    itemIconStyle: BigAction
   - type: TargetAction
-    range: 3
-    interactOnMiss: false
+    range: 25
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:
@@ -217,18 +216,17 @@
 - type: entity
   id: ActionVampireDarkGift
   name: Dark Gift
-  description: "Heal or revive a turned vampire. Activation Cost: 200 Essence."
+  description: "Heal or revive a turned vampire. Activation Cost: 100 Essence."
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon:
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: darkgift
-    useDelay: 60
-    checkCanInteract: false
+    useDelay: 0
+    itemIconStyle: BigAction
   - type: TargetAction
-    range: 2.5
-    interactOnMiss: false
+    range: 25
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:

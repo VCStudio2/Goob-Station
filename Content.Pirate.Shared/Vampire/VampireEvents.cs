@@ -64,3 +64,15 @@ public sealed partial class VampireHypnotiseDoAfterEvent : DoAfterEvent
 
     public override DoAfterEvent Clone() => this;
 }
+
+[Serializable, NetSerializable]
+public sealed partial class VampireSireDoAfterEvent : DoAfterEvent
+{
+    public override DoAfterEvent Clone() => this;
+}
+
+[Serializable, NetSerializable]
+public sealed partial class VampireDarkGiftDoAfterEvent : DoAfterEvent
+{
+    public override DoAfterEvent Clone() => this;
+}
