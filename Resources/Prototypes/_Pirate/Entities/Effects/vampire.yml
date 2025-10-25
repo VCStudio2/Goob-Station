@@ -1,6 +1,7 @@
 - type: entity
   name: Blood Drain
   id: beam_blooddrain
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: /Textures/Effects/lightning.rsi
