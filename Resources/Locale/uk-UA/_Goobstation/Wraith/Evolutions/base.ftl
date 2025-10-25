@@ -1,7 +1,7 @@
 wraith-haunt-show = Ви показуєтесь.
 
 wraith-decay-human-alert = Раптово ви відчуваєте сильну втому!
-wraith-decay-object1 = Ви змінюєте енергію { CAPITALIZE(SUBJECT($target)) }.
+wraith-decay-object1 = Енергія {THE($target)} розкладається!
 wraith-decay-nothing = Тут нічому розкладатися!
 
 wraith-absorb-living = Жива свідомість, що керує цим тілом, захищає його від поглинання.

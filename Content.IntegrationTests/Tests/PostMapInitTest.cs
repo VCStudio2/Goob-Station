@@ -206,6 +206,7 @@ namespace Content.IntegrationTests.Tests
               "Bagel",
               "Barratry",
               "Box",            // Not in pool
+              "BoxTP",          // Pirate
               "CentComm",       // CentComm
               "Chloris",
               "Cluster",
@@ -218,6 +219,7 @@ namespace Content.IntegrationTests.Tests
               "Fland",
               "FlandHighPop",
               "Gate",           // Not in pool
+              "GlacierTP",      // Pirate
               "Kettle",
               "Lambda",         // Not in pool
               "Lavatest",       //Dev map
