@@ -79,11 +79,13 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem
             if (!SolutionContainer.ResolveSolution(uid, bloodstream.BloodSolutionName, ref bloodstream.BloodSolution, out var bloodSolution))
                 continue;
 
+            // Pirate change: Moved blood regeneration to its own system. See Content.Server/_Pirate/Blood/BloodRegenerationPirateSystem.cs
             // Adds blood to their blood level if it is below the maximum; Blood regeneration. Must be alive.
-            if (bloodSolution.Volume < bloodSolution.MaxVolume && !_mobStateSystem.IsDead(uid))
-            {
-                TryModifyBloodLevel((uid, bloodstream), bloodstream.BloodRefreshAmount);
-            }
+            //if (bloodSolution.Volume < bloodSolution.MaxVolume && !_mobStateSystem.IsDead(uid))
+            //{
+            //    TryModifyBloodLevel((uid, bloodstream), bloodstream.BloodRefreshAmount);
+            //}
+            // Pirate ^^^
 
             // Removes blood from the bloodstream based on bleed amount (bleed rate)
             // as well as stop their bleeding to a certain extent.

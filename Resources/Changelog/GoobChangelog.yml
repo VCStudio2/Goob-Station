@@ -325,7 +325,7 @@ Entries:
 - author: Durk
   changes:
   - type: Tweak
-    message: Космічний вітер тепер набагато плавніший :)
+    message: "Космічний вітер тепер набагато плавніший :)"
   id: 45
   time: '2024-07-14T11:01:11.0000000+00:00'
 - author: TooSillyFennec
@@ -1157,7 +1157,7 @@ Entries:
     message: >-
       Натільні камери тепер доступні для служби безпеки та репортерів у спорядженні.
   - type: Add
-    message: Кишенькові телевізори вже тут, але вам їх мати не дозволено :)
+    message: "Кишенькові телевізори вже тут, але вам їх мати не дозволено :)"
   id: 145
   time: '2024-09-23T01:37:21.0000000+00:00'
 - author: Teapug
@@ -3133,7 +3133,7 @@ Entries:
 - author: starch70
   changes:
   - type: Add
-    message: Тайдери тепер мають вбудований радіоканал колективного розуму. Доступ до нього здійснюється за допомогою ":i".
+    message: 'Тайдери тепер мають вбудований радіоканал колективного розуму. Доступ до нього здійснюється за допомогою ":i".'
   id: 357
   time: '2024-12-13T21:51:31.0000000+00:00'
 - author: Aviu
@@ -12504,7 +12504,7 @@ Entries:
 - author: His Grace
   changes:
     - type: Fix
-      message: Виправлено самовидалення "Його Милості". (Гаразд, але цього разу по-справжньому. :3)
+      message: 'Виправлено самовидалення "Його Милості". (Гаразд, але цього разу по-справжньому. :3)'
   id: 1450
   time: '2025-08-11T05:19:44.0000000+00:00'
 - author: Diggy0
@@ -15898,87 +15898,82 @@ Entries:
 - author: Mehonizer
   changes:
     - type: Add
-      message: Plasmamen now spawn with tank harnesses just like voxes do
+      message: "Плазмолюди тепер з'являються з ременями для балонів, як і вокси."
   id: 1849
   time: '2025-10-18T21:47:20.0000000+00:00'
 - author: deltanedas
   changes:
     - type: Tweak
-      message: Upgraded lathes can now print recipes via signal.
+      message: "Покращені токарні верстати тепер можуть друкувати рецепти через сигнал."
   id: 1850
   time: '2025-10-18T21:50:47.0000000+00:00'
 - author: XWASHERE
   changes:
     - type: Fix
-      message: IPCs no longer drop handcuffs when discharged
+      message: "IPC більше не скидають наручники під час розрядження"
     - type: Fix
       message: >-
-        IPCs can no longer interact with items they shouldn't be able to
-        interact with when discharged
+        "IPC більше не можуть взаємодіяти з предметами, з якими вони не повинні мати змогу взаємодіяти під час розрядження"
     - type: Fix
-      message: IPCs can drink from magfed lasers
+      message: "IPC можуть пити з лазерів із магазинним живленням"
     - type: Fix
-      message: IPCs no longer have the borg low power accent at all times
+      message: "IPC більше не мають акценту низького заряду борга постійно"
     - type: Fix
-      message: IPCs can no longer drop equipped items while discharged
+      message: "IPC більше не можуть кидати екіпіровані предмети під час розрядження"
     - type: Fix
-      message: Fix spelling error in recharge text
+      message: "Виправлено орфографічну помилку в тексті перезарядження"
   id: 1851
   time: '2025-10-18T22:00:47.0000000+00:00'
 - author: RadsammyT, Mnemotechnician
   changes:
     - type: Add
       message: >-
-        Interaction Verbs from Einstein Engines. GoobMRP folk: This brings back
-        the 'Interact' dropdown in the context menu. 
+        "Дієслова взаємодії з Einstein Engines. Спільноті GoobMRP: це повертає випадаючий список «Взаємодіяти» у контекстному меню."
     - type: Tweak
-      message: Interaction Verb 'Look At' changed to 'Stare' for impact
+      message: "Дію взаємодії «Подивитися» змінено на «Пялитися» для виразності"
   id: 1852
   time: '2025-10-18T23:22:09.0000000+00:00'
 - author: Richard Blonski
   changes:
     - type: Tweak
       message: >-
-        Tweak: Ammonite Mercury now metabolizes more slowly and no longer has
-        damage scaling.
+        "Аммонітова ртуть тепер метаболізується повільніше і більше не має масштабування ушкоджень."
   id: 1853
   time: '2025-10-19T02:26:10.0000000+00:00'
 - author: squishy97
   changes:
     - type: Add
       message: >-
-        added back the missing emag items syndicate smokes, cyber sun pen, and
-        chap's cult armor
+        "Повернуто відсутні предмети для EMAG: сигарети Синдикату, ручку Cybersun та культову броню капелана"
   id: 1854
   time: '2025-10-19T05:08:56.0000000+00:00'
 - author: Rouden
   changes:
     - type: Fix
       message: >-
-        Fixed lavaland not having any weather and being unreachable for the
-        mining shuttle.
+        "Виправлено відсутність погоди на Лаваленді та недоступність для шахтарського шатла."
     - type: Fix
-      message: Fixed ruins sometimes layering on top of the mining outpost.
+      message: "Виправлено, що руїни іноді накладалися поверх шахтарського аванпосту."
   id: 1855
   time: '2025-10-19T11:47:10.0000000+00:00'
 - author: EvaisaDev
   changes:
     - type: Fix
-      message: AI vision no longer goes black when outside of the station grid.
+      message: "Бачення ШІ більше не темніє за межами сітки станції."
   id: 1856
   time: '2025-10-19T14:51:20.0000000+00:00'
 - author: Richard Blonski
   changes:
     - type: Fix
-      message: Fixed Personal Medical Pop-ups being shared to everyone.
+      message: "Виправлено поширення особистих медичних спливаючих вікон усім."
     - type: Fix
-      message: Fixed sounds when using Medical items being played twice.
+      message: "Виправлено подвійне відтворення звуків при використанні медичних предметів."
   id: 1857
   time: '2025-10-19T21:48:59.0000000+00:00'
 - author: 10kee
   changes:
     - type: Tweak
-      message: Resprited a bunch of hardsuits, modsuits, and other clothing for Vox
+      message: "Перемальовано купу скафандрів, модскафандрів та іншого одягу для Воксів"
   id: 1858
   time: '2025-10-19T21:55:31.0000000+00:00'
 - author: Thesia000
@@ -16091,3 +16086,114 @@ Entries:
       message: Виправлено неспаунювання Підлогових Гоблінів
   id: 1870
   time: '2025-10-22T05:47:13.0000000+00:00'
+- author: Hagvan
+  changes:
+    - type: Add
+      message: "Тепер можна влучати по рухомих, повзучих цілях із дальньої зброї, стріляючи туди, де вони будуть."
+  id: 1871
+  time: '2025-10-22T13:37:34.0000000+00:00'
+- author: Hagvan
+  changes:
+    - type: Add
+      message: >-
+        "Термали тепер можуть бачити невидимих гравців. Космічний ніндзя, стелс-скафандр Cybersun, шедовлінг у режимі shadow walk та стелс-ксеноборг (?) все ще невидимі для термального зору."
+  id: 1872
+  time: '2025-10-22T13:38:31.0000000+00:00'
+- author: Hagvan
+  changes:
+    - type: Tweak
+      message: "Сліди ніг починають утворюватися лише від середніх і більших калюж."
+  id: 1873
+  time: '2025-10-22T13:41:18.0000000+00:00'
+- author: OnsenCapy, Luminal
+  changes:
+    - type: Add
+      message: "Дуже моторошний привид."
+    - type: Add
+      message: >-
+        "У Карго доступна нова покупка — набір для моргу! Він містить кілька мішків для тіл, пляшки бальзамуючої рідини, шприц, біблію та труну, в якій усе це постачається."
+    - type: Add
+      message: >-
+        "Новий реагент — формальдегід. Використовується для бальзамування тіл і запобігає їх гниттю. Також не дає мстивому духу пожирати тіло, якщо всередині є щонайменше 25u!"
+  id: 1874
+  time: '2025-10-22T14:29:28.0000000+00:00'
+- author: wachte1
+  changes:
+    - type: Fix
+      message: >-
+        "Золоті вантузи тепер можна вставляти в ремені двірника, а також використовувати як боєприпаси для лука."
+  id: 1875
+  time: '2025-10-22T16:31:48.0000000+00:00'
+- author: JohnJJohn
+  changes:
+    - type: Add
+      message: "У музичному автоматі нова пісня \"the grayide song\" від Mrjajkes!"
+    - type: Fix
+      message: "Усі аудіофайли в музичному автоматі тепер моно."
+  id: 1876
+  time: '2025-10-22T16:32:35.0000000+00:00'
+- author: Richard Blonski
+  changes:
+    - type: Tweak
+      message: >-
+        "Змінено SOP бригмедика — тепер йому дозволено носити або дизейблер, або пістолет як штатну зброю самооборони."
+  id: 1877
+  time: '2025-10-23T03:22:54.0000000+00:00'
+- author: joaofernandez
+  changes:
+    - type: Add
+      message: "Додано звук друкування етикеток при використанні ручного етикетувальника"
+  id: 1878
+  time: '2025-10-23T22:48:55.0000000+00:00'
+- author: Luminal
+  changes:
+    - type: Fix
+      message: 'Виправлено: здатність «Decay» у Примари (Wraith) не зламує (EMAG) все підряд.'
+    - type: Fix
+      message: 'Виправлено: адміністраторські привиди (Aghosts) більше не зіштовхуються з Примарою (Wraith).'
+    - type: Fix
+      message: 'Виправлено: «Поглинання трупа» у Примари (Wraith) працювало на непізнаних тілах.'
+    - type: Fix
+      message: >-
+        Виправлено: гак щупальцевих потвор (Tentacle Fiends) не мав затримки використання. Тепер
+        він також автоматично видаляється через кілька секунд.
+    - type: Fix
+      message: >-
+        Нора щура від Хворобливого Щура (моб Примари-Чумоносця) тепер спавнить лише одну за
+        раз; попередня нора видаляється.
+    - type: Fix
+      message: 'Виправлено: шейдери Примари ламали режим сумісності.'
+    - type: Fix
+      message: 'Виправлено: формальдегід тепер зменшує гниття на 60 с за 1u замість 600 с.'
+    - type: Tweak
+      message: 'Вогні опіку Примари більше не обпалюють гуманоїдів.'
+    - type: Tweak
+      message: 'Ослаблення Примари в солі триває 15 секунд замість 8.'
+    - type: Tweak
+      message: 'Посилено здатність «Створити ревенанта» у Примари-Вісника.'
+  id: 1879
+  time: '2025-10-24T13:01:14.0000000+00:00'
+- author: Gab
+  changes:
+    - type: Fix
+      message: >-
+        Розширені біозахисні медіпени тепер містять достатньо Ambuzol Plus для
+        імунізації проти зомбіфікації.
+  id: 1880
+  time: '2025-10-24T13:37:21.0000000+00:00'
+- author: OnsenCapy
+  changes:
+    - type: Fix
+      message: 'Виправлено різні проблеми, пов’язані з мобами, призваними Примарою (Wraith).'
+    - type: Fix
+      message: 'Написи кров’ю, створені адмінами, більше не зациклюються.'
+  id: 1881
+  time: '2025-10-24T16:03:35.0000000+00:00'
+- author: JohnJohn, Yonsim, Xeve
+  changes:
+    - type: Add
+      message: >-
+        Додано плюшевого Xeve; він поводиться як вуду-лялька для нього, тож
+        будь ласка, знищуйте її, коли він у грі.
+  id: 1882
+  time: '2025-10-24T17:51:40.0000000+00:00'

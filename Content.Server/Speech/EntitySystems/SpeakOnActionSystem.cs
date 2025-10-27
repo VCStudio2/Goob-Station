@@ -12,7 +12,6 @@ using Content.Shared.Damage;
 using Content.Shared.Chat;
 using Content.Shared._Shitmed.Damage;
 
-
 namespace Content.Server.Speech.EntitySystems;
 
 /// <summary>
@@ -61,7 +60,6 @@ public sealed class SpeakOnActionSystem : SharedSpeakOnActionSystem
 
         if (string.IsNullOrWhiteSpace(speech))
             return;
-
         _chat.TrySendInGameICMessage(user, Loc.GetString(speech), InGameICChatType.Speak, false);
     }
 }

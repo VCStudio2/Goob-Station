@@ -457,6 +457,8 @@
       enum.WizardTeleportUiKey.Key: # Goobstation - wizard
         type: WizardTeleportBoundUserInterface
         requireInputValidation: false
+      enum.VampireMutationUiKey.Key:
+        type: VampireMutationBoundUserInterface #Pirate
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -514,6 +516,7 @@
   abstract: true
   components:
   - type: Absorbable # Goobstation - changelings
+  - type: WraithAbsorbable # Goobstation - wraith
   - type: Barotrauma
     damage:
       types:

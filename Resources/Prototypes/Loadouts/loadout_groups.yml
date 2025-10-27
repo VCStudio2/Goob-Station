@@ -173,8 +173,8 @@
   - FlowerWreath
   - Hairflower
   - Headphones
-  - TrinketsClothingHeadPaperSack #Pirate 
-# PIRATE PLUSHIES START VVVV
+# Pirate VVV
+  - TrinketsClothingHeadPaperSack
   - PlushieVulpSusie
   - PlushieEntony
   - PlushieIpcCat
@@ -185,7 +185,7 @@
   - PlushieSkeleton
   - PlushieTayler
   - PlushiePocketAssistant
-# PIRATE PLUSHIES END ^^^^
+# Pirate ^^^
   - PlushieLizard
   - PlushieSpaceLizard
   - PersonalAI # Goobstation
@@ -1125,6 +1125,9 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorBeret
+  - MantisTinfoil # Pirate
+  - MantisHelmet # Pirate
+  - MantisFez # Pirate
 
 - type: loadoutGroup
   id: ResearchDirectorNeck

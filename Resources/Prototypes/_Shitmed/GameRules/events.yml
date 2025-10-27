@@ -23,7 +23,7 @@
   - type: StationEvent
     earliestStart: 15
     reoccurrenceDelay: 45
-    weight: 4 # Goobstation - 7.5 -> 4
+    weight: 0 # Pirate no abductor
     minimumPlayers: 10
     duration: null # Goobstation - chud
     chaos:
@@ -123,7 +123,7 @@
   - type: StationEvent
     earliestStart: 15
     reoccurrenceDelay: 45
-    weight: 4 # Goobstation - 7.5 -> 4
+    weight: 0 # Pirate no abductor
     minimumPlayers: 20
     duration: null # Goobstation - chud
     chaos:
