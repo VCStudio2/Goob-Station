@@ -48,23 +48,6 @@ namespace Content.Client._Pirate.Changelog
                 }
             }
 
-            // foreach (var file in _resource.ContentFindFiles(new ResPath("/Changelog/")))
-            // {
-            //     if (file.Extension != "yml")
-            //         continue;
-
-            //     var yamlData = _resource.ContentFileReadYaml(file);
-            //     if (yamlData.Documents.Count == 0)
-            //         continue;
-
-            //     var node = yamlData.Documents[0].RootNode.ToDataNodeCast<MappingDataNode>();
-            //     var log = _serilization.Read<PirateChangelog>(node, notNullableOverride: true);
-            //     if (string.IsNullOrWhiteSpace(log.Name))
-            //         log.Name = file.FilenameWithoutExtension;
-
-            //     Changelogs.Add(log);
-            // }
-
             Changelogs.Sort((a, b) => a.Order.CompareTo(b.Order));
         }
     }
