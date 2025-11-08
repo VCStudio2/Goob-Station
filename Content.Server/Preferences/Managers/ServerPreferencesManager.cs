@@ -149,7 +149,14 @@ namespace Content.Server.Preferences.Managers
             prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor, curPrefs.ConstructionFavorites);
 
             if (ShouldStorePrefs(session.Channel.AuthType))
+            {
+                if (profile is HumanoidCharacterProfile hum)
+                    _sawmill.Info($"Saving profile for {userId} slot {slot}: Nationality={hum.Nationality}, Employer={hum.Employer}, Lifepath={hum.Lifepath}");
+                else
+                    _sawmill.Info($"Saving profile for {userId} slot {slot}: non-humanoid profile type {profile.GetType().Name}");
+
                 await _db.SaveCharacterSlotAsync(userId, profile, slot);
+            }
         }
 
         public async Task SetConstructionFavorites(NetUserId userId, List<ProtoId<ConstructionPrototype>> favorites)
