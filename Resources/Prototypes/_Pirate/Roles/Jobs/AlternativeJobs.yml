@@ -28,13 +28,13 @@
 
 - type: alternativeJob
   id: AlternativeJobBBQMaster
-  jobName: job-alternative-bbq-master
+  jobName: job-alternative-name-bbq-master
   jobDescription: job-description-bbq-master
   parentJobId: Chef
 
 - type: alternativeJob
   id: AlternativeJobBaker
-  jobName: job-alternative-baker
+  jobName: job-alternative-name-baker
   jobDescription: job-description-baker
   parentJobId: Chef
 
