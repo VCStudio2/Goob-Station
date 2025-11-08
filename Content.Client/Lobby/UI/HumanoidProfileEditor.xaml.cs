@@ -210,6 +210,9 @@ namespace Content.Client.Lobby.UI
         private readonly JobRequirementsManager _requirements;
         private readonly LobbyUIController _controller;
 
+        // Suppress programmatic SelectId() from firing OnItemSelected handlers and marking the profile dirty
+        private bool _suppressSelectors;
+
         private readonly SpriteSystem _sprite;
 
         // CCvar.
@@ -407,18 +410,24 @@ namespace Content.Client.Lobby.UI
 
             NationalityButton.OnItemSelected += args =>
             {
+                if (_suppressSelectors)
+                    return;
                 NationalityButton.SelectId(args.Id);
                 SetNationality(_nationalies[args.Id].ID);
             };
 
             EmployerButton.OnItemSelected += args =>
             {
+                if (_suppressSelectors)
+                    return;
                 EmployerButton.SelectId(args.Id);
                 SetEmployer(_employers[args.Id].ID);
             };
 
             LifepathButton.OnItemSelected += args =>
             {
+                if (_suppressSelectors)
+                    return;
                 LifepathButton.SelectId(args.Id);
                 SetLifepath(_lifepaths[args.Id].ID);
             };
@@ -874,22 +883,30 @@ namespace Content.Client.Lobby.UI
                     return CheckRequirementsValid(o.Requirements, prof);
                 }));
 
-            // Ensure the currently saved nationality is present even if filtered out (avoid UI resetting to default).
-            if (Profile != null && !_nationalies.Any(n => n.ID == Profile.Nationality)
-                && _prototypeManager.TryIndex(Profile.Nationality, out NationalityPrototype? savedNat))
+            _suppressSelectors = true;
+            try
             {
-                _nationalies.Insert(0, savedNat);
-            }
+                // Ensure the currently saved nationality is present even if filtered out (avoid UI resetting to default).
+                if (Profile != null && !_nationalies.Any(n => n.ID == Profile.Nationality)
+                    && _prototypeManager.TryIndex(Profile.Nationality, out NationalityPrototype? savedNat))
+                {
+                    _nationalies.Insert(0, savedNat);
+                }
 
-            var selectedIndex = -1;
-            for (var i = 0; i < _nationalies.Count; i++)
-            {
-                NationalityButton.AddItem(Loc.GetString(_nationalies[i].NameKey), i);
-                if (selectedIndex < 0 && Profile?.Nationality == _nationalies[i].ID)
-                    selectedIndex = i;
+                var selectedIndex = -1;
+                for (var i = 0; i < _nationalies.Count; i++)
+                {
+                    NationalityButton.AddItem(Loc.GetString(_nationalies[i].NameKey), i);
+                    if (selectedIndex < 0 && Profile?.Nationality == _nationalies[i].ID)
+                        selectedIndex = i;
+                }
+                if (selectedIndex >= 0)
+                    NationalityButton.SelectId(selectedIndex);
             }
-            if (selectedIndex >= 0)
-                NationalityButton.SelectId(selectedIndex);
+            finally
+            {
+                _suppressSelectors = false;
+            }
         }
 
         public void RefreshEmployers()
@@ -904,22 +921,30 @@ namespace Content.Client.Lobby.UI
                     return CheckRequirementsValid(o.Requirements, prof);
                 }));
 
-            // Preserve saved employer if filtered out.
-            if (Profile != null && !_employers.Any(e => e.ID == Profile.Employer)
-                && _prototypeManager.TryIndex(Profile.Employer, out EmployerPrototype? savedEmp))
+            _suppressSelectors = true;
+            try
             {
-                _employers.Insert(0, savedEmp);
-            }
+                // Preserve saved employer if filtered out.
+                if (Profile != null && !_employers.Any(e => e.ID == Profile.Employer)
+                    && _prototypeManager.TryIndex(Profile.Employer, out EmployerPrototype? savedEmp))
+                {
+                    _employers.Insert(0, savedEmp);
+                }
 
-            var selectedEmployer = -1;
-            for (var i = 0; i < _employers.Count; i++)
-            {
-                EmployerButton.AddItem(Loc.GetString(_employers[i].NameKey), i);
-                if (selectedEmployer < 0 && Profile?.Employer == _employers[i].ID)
-                    selectedEmployer = i;
+                var selectedEmployer = -1;
+                for (var i = 0; i < _employers.Count; i++)
+                {
+                    EmployerButton.AddItem(Loc.GetString(_employers[i].NameKey), i);
+                    if (selectedEmployer < 0 && Profile?.Employer == _employers[i].ID)
+                        selectedEmployer = i;
+                }
+                if (selectedEmployer >= 0)
+                    EmployerButton.SelectId(selectedEmployer);
             }
-            if (selectedEmployer >= 0)
-                EmployerButton.SelectId(selectedEmployer);
+            finally
+            {
+                _suppressSelectors = false;
+            }
         }
 
         public void RefreshLifepaths()
@@ -934,22 +959,30 @@ namespace Content.Client.Lobby.UI
                     return CheckRequirementsValid(o.Requirements, prof);
                 }));
 
-            // Preserve saved lifepath if filtered out.
-            if (Profile != null && !_lifepaths.Any(l => l.ID == Profile.Lifepath)
-                && _prototypeManager.TryIndex(Profile.Lifepath, out LifepathPrototype? savedLife))
+            _suppressSelectors = true;
+            try
             {
-                _lifepaths.Insert(0, savedLife);
-            }
+                // Preserve saved lifepath if filtered out.
+                if (Profile != null && !_lifepaths.Any(l => l.ID == Profile.Lifepath)
+                    && _prototypeManager.TryIndex(Profile.Lifepath, out LifepathPrototype? savedLife))
+                {
+                    _lifepaths.Insert(0, savedLife);
+                }
 
-            var selectedLifepath = -1;
-            for (var i = 0; i < _lifepaths.Count; i++)
-            {
-                LifepathButton.AddItem(Loc.GetString(_lifepaths[i].NameKey), i);
-                if (selectedLifepath < 0 && Profile?.Lifepath == _lifepaths[i].ID)
-                    selectedLifepath = i;
+                var selectedLifepath = -1;
+                for (var i = 0; i < _lifepaths.Count; i++)
+                {
+                    LifepathButton.AddItem(Loc.GetString(_lifepaths[i].NameKey), i);
+                    if (selectedLifepath < 0 && Profile?.Lifepath == _lifepaths[i].ID)
+                        selectedLifepath = i;
+                }
+                if (selectedLifepath >= 0)
+                    LifepathButton.SelectId(selectedLifepath);
             }
-            if (selectedLifepath >= 0)
-                LifepathButton.SelectId(selectedLifepath);
+            finally
+            {
+                _suppressSelectors = false;
+            }
         }
         // Pirate edit end - port EE contractors
 

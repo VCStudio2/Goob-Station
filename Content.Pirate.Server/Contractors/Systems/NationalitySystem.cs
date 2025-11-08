@@ -21,6 +21,7 @@ public sealed class NationalitySystem : EntitySystem
     [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
     [Dependency] private readonly IConfigurationManager _configuration = default!;
     [Dependency] private readonly IComponentFactory _componentFactory = default!;
+    [Dependency] private readonly Content.Server._EinsteinEngines.Language.LanguageSystem _language = default!;
 
     public override void Initialize()
     {
@@ -57,6 +58,7 @@ public sealed class NationalitySystem : EntitySystem
             return;
 
         AddNationality(uid, nationalityPrototype);
+        GrantNationalityLanguages(uid, nationality);
     }
 
     /// <summary>
@@ -78,5 +80,26 @@ public sealed class NationalitySystem : EntitySystem
         }
 
         return true;
+    }
+
+    private void GrantNationalityLanguages(EntityUid uid, ProtoId<NationalityPrototype> nationality)
+    {
+        // Map nationality to language prototype IDs.
+        // Add more as needed.
+        switch (nationality)
+        {
+            case "Nederlandic":
+                _language.AddLanguage(uid, "NovuNederic");
+                break;
+            case "Elyran":
+                _language.AddLanguage(uid, "Elyran");
+                break;
+            case "Valyrian":
+                _language.AddLanguage(uid, "ValyrianStandard");
+                break;
+            case "Solarian":
+                _language.AddLanguage(uid, "SolCommon");
+                break;
+        }
     }
 }
