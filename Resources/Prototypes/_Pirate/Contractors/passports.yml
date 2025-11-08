@@ -31,24 +31,24 @@
       layers:
       - state: passport_biesel_open # todo: allow people to toggle open and closed
       - state: passport_species_human # Todo: make variable via a custom component
-    - type: ExtendDescription
-      descriptionList:
-      - description: "bieselite_view_biesel_passport"
-        fontSize: 12
-        color: "#77ff77"
-        requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Bieselite
-      - description: "solarian_view_biesel_passport"
-        fontSize: 12
-        color: "#ff7777"
-        requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Solarian
+#    - type: ExtendDescription
+#      descriptionList:
+#      - description: "bieselite_view_biesel_passport"
+#        fontSize: 12
+#        color: "#77ff77"
+#        requireDetailRange: true
+#        requirements:
+#        - !type:CharacterNationalityRequirement
+#          nationalities:
+#          - Bieselite
+#      - description: "solarian_view_biesel_passport"
+#        fontSize: 12
+#        color: "#ff7777"
+#        requireDetailRange: true
+#        requirements:
+#        - !type:CharacterNationalityRequirement
+#          nationalities:
+#          - Solarian
 
 - type: entity
   name: Sol Alliance passport
@@ -60,24 +60,24 @@
       layers:
       - state: passport_sol_open # todo: allow people to toggle open and closed
       - state: passport_species_human # Todo: make variable via a custom component
-    - type: ExtendDescription
-      descriptionList:
-      - description: "bieselite_view_sol_passport"
-        fontSize: 12
-        color: "#ff7777"
-        requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Bieselite
-      - description: "solarian_view_sol_passport"
-        fontSize: 12
-        color: "#77ff77"
-        requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Solarian
+#    - type: ExtendDescription
+#      descriptionList:
+#      - description: "bieselite_view_sol_passport"
+#        fontSize: 12
+#        color: "#ff7777"
+#        requireDetailRange: true
+#        requirements:
+#        - !type:CharacterNationalityRequirement
+#          nationalities:
+#          - Bieselite
+#      - description: "solarian_view_sol_passport"
+#        fontSize: 12
+#        color: "#77ff77"
+#        requireDetailRange: true
+#        requirements:
+#        - !type:CharacterNationalityRequirement
+#          nationalities:
+#          - Solarian
 
 - type: entity
   name: Republic of Elyra passport
