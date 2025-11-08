@@ -94,6 +94,7 @@ job-alternative-name-electrician = Електрик
 
 # Медичний
 job-alternative-name-surgeon = Хірург
+job-alternative-name-necrologist = Некролог
 job-alternative-name-cryo-specialist = Спеціаліст з кріогеніки
 job-alternative-name-pharmacist = Фармацеут
 job-alternative-name-smo = Старший медичний офіцер
