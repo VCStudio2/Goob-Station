@@ -1,4 +1,5 @@
-using Content.Shared.Roles;
+using Content.Shared.Customization.Systems;
+using Content.Shared.Traits;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 
@@ -23,5 +24,8 @@ public sealed partial class EmployerPrototype : IPrototype
     public HashSet<ProtoId<EmployerPrototype>> Rivals { get; } = new();
 
     [DataField]
-    public List<JobRequirement> Requirements = new();
+    public List<CharacterRequirement> Requirements = new();
+
+    [DataField(serverOnly: true)]
+    public TraitFunction[] Functions { get; private set; } = Array.Empty<TraitFunction>();
 }
