@@ -122,10 +122,21 @@
 - type: entity
   name: паспорт Золотої Глибини
   parent: BasePassport
-  id: GoldendeepPassport
+  id: GoldenDeepPassport
   components:
     - type: Sprite
       sprite: _Pirate/Contractors/Passport.rsi
       layers:
       - state: passport_goldendeep_open
       - state: passport_species_human # Todo: make variable via a custom component
+
+- type: entity
+  name: гаманець Вокса
+  parent: BasePassport
+  id: VoxWallet
+  components:
+    - type: Sprite
+      sprite: _Pirate/Contractors/Passport.rsi
+      layers:
+      - state: vox_wallet_open
+      - state: vox_wallet_text
