@@ -210,8 +210,7 @@ namespace Content.Client.Lobby.UI
         private readonly JobRequirementsManager _requirements;
         private readonly LobbyUIController _controller;
 
-        // Suppress programmatic SelectId() from firing OnItemSelected handlers and marking the profile dirty
-        private bool _suppressSelectors;
+        private bool _suppressSelectors; // Pirate - port EE contractors
 
         private readonly SpriteSystem _sprite;
 
@@ -1041,7 +1040,6 @@ namespace Content.Client.Lobby.UI
 
             LifepathDescriptionLabel.SetMessage(Loc.GetString(descriptionKey));
         }
-        // Pirate edit end - port EE contractors
 
         private bool CheckRequirementsValid(IReadOnlyCollection<JobRequirement>? requirements, HumanoidCharacterProfile profile)
         {
@@ -1059,6 +1057,7 @@ namespace Content.Client.Lobby.UI
 
             return true;
         }
+        // Pirate edit end - port EE contractors
 
         public void RefreshAntags()
         {
@@ -1725,9 +1724,9 @@ namespace Content.Client.Lobby.UI
             RefreshLoadouts();
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
-            RefreshNationalities();
-            RefreshEmployers();
-            RefreshLifepaths();
+            RefreshNationalities(); // Pirate - port EE contractors
+            RefreshEmployers(); // Pirate - port EE contractors
+            RefreshLifepaths(); // Pirate - port EE contractors
             UpdateLifepathDescription();
             ReloadPreview();
             // begin Goobstation: port EE height/width sliders
@@ -1745,7 +1744,7 @@ namespace Content.Client.Lobby.UI
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
-            ReloadClothes(); // Nationalities may have specific gear, reload the clothes
+            ReloadClothes();
         }
 
         private void SetEmployer(string newEmployer)
@@ -1754,7 +1753,7 @@ namespace Content.Client.Lobby.UI
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
-            ReloadClothes(); // Employers may have specific gear, reload the clothes
+            ReloadClothes();
         }
 
         private void SetLifepath(string newLifepath)
@@ -1763,10 +1762,9 @@ namespace Content.Client.Lobby.UI
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
-            ReloadClothes(); // Lifepaths may have specific gear, reload the clothes
+            ReloadClothes();
             UpdateLifepathDescription();
         }
-        // Pirate edit end - port EE contractors
 
         private void UpdateCharacterRequired()
         {
@@ -1782,6 +1780,7 @@ namespace Content.Client.Lobby.UI
             // Minimal implementation: rebuild the preview entity respecting the ShowClothes toggle.
             ReloadPreview();
         }
+        // Pirate edit end - port EE contractors
 
         private void SetName(string newName)
         {

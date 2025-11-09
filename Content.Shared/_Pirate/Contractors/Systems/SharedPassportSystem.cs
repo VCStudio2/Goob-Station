@@ -59,7 +59,6 @@ public class SharedPassportSystem : EntitySystem
             $"PID: {GenerateIdentityString(component.OwnerProfile.Name
             + component.OwnerProfile.Height
             + component.OwnerProfile.Age
-            + component.OwnerProfile.Height
             + component.OwnerProfile.Width
             + component.OwnerProfile.FlavorText)}",
             44);
