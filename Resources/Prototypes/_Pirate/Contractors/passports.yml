@@ -15,11 +15,20 @@
       - state: passport_species_human # Todo: make variable via a custom component
     - type: Appearance
     - type: EmitSoundOnPickup
-      sound: /Audio/_Goobstation/Items/Handling/book_pickup.ogg
+      sound:
+        path: /Audio/_Goobstation/Items/handling/book_pickup.ogg
+        params:
+          volume: -4
     - type: EmitSoundOnDrop
-      sound: /Audio/_Goobstation/Items/Handling/book_drop.ogg
+      sound:
+        path: /Audio/_Goobstation/Items/handling/book_drop.ogg
+        params:
+          volume: -4
     - type: EmitSoundOnLand
-      sound: /Audio/_Goobstation/Items/Handling/book_drop.ogg
+      sound:
+        path: /Audio/_Goobstation/Items/handling/book_drop.ogg
+        params:
+          volume: -4
 
 - type: entity
   name: Biesel Republic passport

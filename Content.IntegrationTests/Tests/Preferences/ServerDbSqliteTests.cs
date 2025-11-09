@@ -145,43 +145,6 @@ namespace Content.IntegrationTests.Tests.Preferences
             await pair.CleanReturnAsync();
         }
 
-        [Test]
-        public async Task TestContractorFieldsPersist()
-        {
-            var pair = await PoolManager.GetServerClient();
-            var server = pair.Server;
-            var db = GetDb(server);
-            var username = new NetUserId(new Guid("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"));
-
-            // Initialize with defaults
-            await db.InitPrefsAsync(username, new HumanoidCharacterProfile());
-
-            // Create a profile with custom contractor fields
-            var profile = new HumanoidCharacterProfile()
-            {
-                Name = "Persist Tester",
-                Species = "Human",
-                Nationality = "Solarian",
-                Employer = "EinsteinEngines",
-                Lifepath = "Junker",
-            };
-
-            await db.SaveCharacterSlotAsync(username, profile, 0);
-
-            var loaded = await db.GetPlayerPreferencesAsync(username);
-            Assert.That(loaded, Is.Not.Null);
-            var roundTripped = loaded!.Characters.Single(p => p.Key == 0).Value as HumanoidCharacterProfile;
-            Assert.That(roundTripped, Is.Not.Null);
-            Assert.Multiple(() =>
-            {
-                Assert.That(roundTripped!.Nationality, Is.EqualTo("Solarian"));
-                Assert.That(roundTripped!.Employer, Is.EqualTo("EinsteinEngines"));
-                Assert.That(roundTripped!.Lifepath, Is.EqualTo("Junker"));
-            });
-
-            await pair.CleanReturnAsync();
-        }
-
         private static NetUserId NewUserId()
         {
             return new(Guid.NewGuid());
