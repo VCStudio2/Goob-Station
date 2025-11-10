@@ -26,7 +26,11 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - EinsteinEngines
+      - PMCG
+      - HephaestusIndustries
+      - ZavodskoiInterstellar
+      - IdrisIncorporated
+      - ZengHuPharmaceuticals
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
