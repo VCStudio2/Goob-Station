@@ -13,5 +13,5 @@ advertisement-slotmachine-1 = Програвати можна лише до пе
 advertisement-slotmachine-2 = Азартні ігри — хвороба, але це єдина хвороба, з якою можна виграти купу грошей!
 advertisement-slotmachine-3 = ЩЕ ОДИН ОБЕРТ!!
 advertisement-slotmachine-4 = Ігноруйте реабілітацію, вони просто не хочуть бачити ваш успіх!
-advertisement-slotmachine-5 = Ще одна гра — і можна кидати
+advertisement-slotmachine-5 = Ще одна гра — і можеш зупинитися
 advertisement-slotmachine-6 = Підходь і дай мені оберт!
