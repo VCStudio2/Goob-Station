@@ -362,10 +362,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
             if (spriteName != null)
             {
-                if (colors != null && i < colors.Count)
-                    colorDict.Add(spriteName, colors[i]);
-                else
-                    colorDict.Add(spriteName, Color.White);
+                var color = (colors != null && i < colors.Count)
+                    ? colors[i]
+                    : Color.White;
+                colorDict[spriteName] = color;
             }
         }
 
