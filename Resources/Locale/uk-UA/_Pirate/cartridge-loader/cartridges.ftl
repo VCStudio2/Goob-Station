@@ -13,8 +13,7 @@ crime-assist-severity-veryheavy = Особливо тяжкі порушення
 crime-assist-severity-critical = Критичні порушення
 
 # --- Start & Category Questions ---
-crime-assist-q-start = Інцидент, що розглядається, пов'язаний з...
-crime-assist-q-category-person = ...нанесенням моральної або фізичної шкоди особі?
+crime-assist-q-category-person = Інцидент, що розглядається, пов'язаний з нанесенням моральної або фізичної шкоди особі?
 crime-assist-q-category-property = ...пошкодженням майна/станції?
 crime-assist-q-category-theft = ...крадіжкою?
 crime-assist-q-category-possession = ...незаконним володінням предметами?

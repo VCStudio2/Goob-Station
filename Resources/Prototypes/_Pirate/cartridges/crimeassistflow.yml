@@ -1,13 +1,7 @@
 - type: crimeAssistPage
   id: "mainmenu"
   locKey: "crime-assist-main-menu"
-  onStart: "crime-assist-q-start"
-
-- type: crimeAssistPage
-  id: "crime-assist-q-start"
-  locKey: "crime-assist-q-start"
-  onYes: "crime-assist-q-category-person"
-  onNo: "crime-assist-q-category-person"
+  onStart: "crime-assist-q-category-person"
 
 - type: crimeAssistPage
   id: "crime-assist-q-category-person"
