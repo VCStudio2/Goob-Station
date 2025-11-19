@@ -101,6 +101,7 @@ public sealed partial class VampireSystem : EntitySystem
         SubscribeLocalEvent<VampireComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<VampireComponent, VampireBloodChangedEvent>(OnVampireBloodChangedEvent);
         SubscribeLocalEvent<VampireComponent, VampireAddBloodEssenceEvent>(OnVampireAddBloodEssence);
+        SubscribeLocalEvent<VampireCureComponent, ComponentInit>(OnVampireCureInit);
 
         SubscribeLocalEvent<VampireComponent, AfterAutoHandleStateEvent>(GetState);
         SubscribeLocalEvent<VampireComponent, VampireMutationPrototypeSelectedMessage>(OnMutationSelected);
@@ -204,8 +205,21 @@ public sealed partial class VampireSystem : EntitySystem
 
     private void OnExamined(EntityUid uid, VampireComponent component, ExaminedEvent args)
     {
-        if (HasComp<VampireFangsExtendedComponent>(uid) && args.IsInDetailsRange && !_food.IsMouthBlocked(uid))
+        if (!args.IsInDetailsRange)
+            return;
+
+        // Show extended fangs if the mouth is visible.
+        if (HasComp<VampireFangsExtendedComponent>(uid) && !_food.IsMouthBlocked(uid))
             args.AddMarkup($"{Loc.GetString("vampire-fangs-extended-examine")}{Environment.NewLine}");
+
+        // Show glowing red eyes when they are not covered.
+        var eyesEvent = new Content.Goobstation.Shared.Devil.IsEyesCoveredCheckEvent();
+        RaiseLocalEvent(uid, eyesEvent);
+
+        if (eyesEvent.IsEyesProtected)
+            return;
+
+        args.PushMarkup(Loc.GetString("vampire-component-examined", ("target", Content.Shared.IdentityManagement.Identity.Entity(uid, EntityManager))));
     }
 
     private void OnVampireAddBloodEssence(EntityUid uid, VampireComponent component, VampireAddBloodEssenceEvent args)
@@ -416,6 +430,19 @@ public sealed partial class VampireSystem : EntitySystem
     {
         SelectedMutation = component.CurrentMutation
     };
+
+    /// <summary>
+    /// Triggered when holy water applies <see cref="VampireCureComponent"/> via the CureVampire effect.
+    /// Simply removes the main vampire component; the rest is cleaned up in the
+    /// vampire rule system on component shutdown.
+    /// </summary>
+    private void OnVampireCureInit(EntityUid uid, VampireCureComponent component, ComponentInit args)
+    {
+        RemCompDeferred<VampireCureComponent>(uid);
+
+        if (HasComp<VampireComponent>(uid))
+            RemCompDeferred<VampireComponent>(uid);
+    }
 
     private void TryOpenUi(EntityUid uid, EntityUid user, VampireComponent? component = null)
     {
