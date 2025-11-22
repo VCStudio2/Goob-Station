@@ -16,8 +16,8 @@
 
 - type: entity
   id: SlasherSurviveObjective
-  name: "Вижити до кінця"
-  description: "Ти не Слешер, якщо помреш."
+  name: Survive until the end
+  description: You wouldn't be The Slasher if you died.
   components:
   - type: Objective
     difficulty: 1
