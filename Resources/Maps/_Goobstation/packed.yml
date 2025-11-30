@@ -60,7 +60,7 @@ entities:
       name: Packed Map
     - type: Transform
     - type: Map
-      mapPaused: True
+      mapPaused: False
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
